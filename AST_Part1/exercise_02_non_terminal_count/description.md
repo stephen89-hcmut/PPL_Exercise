@@ -1,5 +1,29 @@
 # Bai 2 - NonTerminalCount
 
+
+
+Given the grammar of MP as follows:
+
+program: vardecls EOF;
+
+vardecls: vardecl vardecltail;
+
+vardecltail: vardecl vardecltail | ;
+
+vardecl: mptype ids ';' ;
+
+mptype: INTTYPE | FLOATTYPE;
+
+ids: ID ',' ids | ID;
+
+INTTYPE: 'int';
+
+FLOATTYPE: 'float';
+
+ID: [a-z]+ ;
+
+Please modify the bodies of NonTerminalCount's methods to count the internal nodes in the parse tree.
+
 ## Muc tieu
 
 Dem so internal nodes trong parse tree. Moi `ParserRuleContext` duoc dem mot lan; terminal token khong duoc dem.

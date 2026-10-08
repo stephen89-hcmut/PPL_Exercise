@@ -1,5 +1,43 @@
 # Bai 3 - ASTGeneration voi grammar de quy
 
+
+
+Given the grammar of MP as follows:
+
+program: vardecls EOF;
+
+vardecls: vardecl vardecltail;
+
+vardecltail: vardecl vardecltail | ;
+
+vardecl: mptype ids ';' ;
+
+mptype: INTTYPE | FLOATTYPE;
+
+ids: ID ',' ids | ID;
+
+INTTYPE: 'int';
+
+FLOATTYPE: 'float';
+
+ID: [a-z]+ ;
+
+and AST classes as follows:
+
+class Program:#decl:list(VarDecl)
+
+class Type(ABC): pass
+
+class IntType(Type): pass
+
+class FloatType(Type): pass
+
+class VarDecl: #variable:Id; varType: Type
+
+class Id: #name:str
+
+Please modify the bodies of ASTGeneration's methods to generate the AST of a MP input.
+
 ## Muc tieu
 
 Sinh AST tu grammar co danh sach declaration va identifier viet bang production de quy.

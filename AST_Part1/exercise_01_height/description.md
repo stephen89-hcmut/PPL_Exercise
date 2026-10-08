@@ -1,5 +1,29 @@
 # Bai 1 - Height
 
+
+
+Given the grammar of MP as follows:
+
+program: vardecls EOF;
+
+vardecls: vardecl vardecltail;
+
+vardecltail: vardecl vardecltail | ;
+
+vardecl: mptype ids ';' ;
+
+mptype: INTTYPE | FLOATTYPE;
+
+ids: ID ',' ids | ID;
+
+INTTYPE: 'int';
+
+FLOATTYPE: 'float';
+
+ID: [a-z]+ ;
+
+Please modify the bodies of Height's methods to return the height of the parse tree. Your code starts at line 10.
+
 ## Muc tieu
 
 Viet visitor tinh height cua parse tree cho grammar `MPRecursive.g4`.

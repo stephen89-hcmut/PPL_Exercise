@@ -41,10 +41,15 @@ Treat supplied expected outputs as the exact behavioral contract.
 
 For every exercise create:
 
-- `description.md`: original statement, grammar, AST classes, student instructions, examples, and run command.
+- `description.md`: must follow the required documentation format below.
 - `solution.py`: student skeleton only. Preserve the requested class, base class, method names, and parameters. Methods the student must implement must remain `return None` or the exact placeholder from the prompt. Do not leave hidden working helpers in the student file.
 - `answer.py`: complete reference implementation used only for validation.
-- `main.py`: runner for the student skeleton; support `--answer` for the reference implementation and `--demo-failure` for a deliberate mismatch.
+- `main.py`: isolated runner for this exercise only; support `--answer` for the reference implementation and `--demo-failure` for a deliberate mismatch.
+
+Every exercise runner must be independently executable. Running one command such
+as `python exercise_04/main.py` must print only that exercise's test cases. It
+must not import, invoke, or print results from a sibling exercise or the root
+runner. A root `run_all.py` may exist separately for running the complete suite.
 
 For a group of exercises also create or reuse:
 
@@ -55,12 +60,42 @@ For a group of exercises also create or reuse:
 - Root runner with correct exit codes.
 - `README.md` and `Guid.md`.
 
+### Required `description.md` format
+
+Every exercise's `description.md` must contain these headings in this order:
+
+```markdown
+# <Exercise title>
+
+## Đề bài
+<The complete exercise requirement, grammar/API, constraints, and skeleton expectations.>
+
+## Expected Output
+<Every supplied input and its expected output, copied into readable examples or a table.>
+
+## Run
+<Commands to run this exercise alone, run the reference answer with --answer, and run the student skeleton.>
+```
+
+Rules:
+
+- Keep the three headings exactly as `Đề bài`, `Expected Output`, and `Run`.
+- `Đề bài` must include the task requirements and the relevant skeleton/API, not only a short summary.
+- `Expected Output` must include all Expected values supplied by the user and the corresponding inputs. Do not omit cases that demonstrate a common failure.
+- `Run` must contain commands for the isolated exercise runner. Include `--answer` when the project provides a reference answer and explain that removing it runs the student skeleton.
+- Do not replace the required sections with only a link to another document. Additional sections may follow `Run`.
+
 ### Preserve skeleton semantics
 
 - Keep class names, visitor base class, method names, and parameters.
 - For ANTLR-generated Python, a grammar-specific visitor such as `MPRecursiveVisitor` or `MPRepeatedVisitor` is the infrastructure equivalent of `MPVisitor` in the prompt.
 - Add only imports and minimal runner plumbing needed to execute the skeleton.
 - If recursive grammar requires extra visitor methods not shown in the prompt, document why and include them as TODO methods rather than implementing them invisibly.
+- Preserve user edits in the student file. Read the current file before editing and
+  repair only the requested slice.
+- Match the actual grammar variant used by the exercise. For example, a repeated
+  grammar exposes `ctx.vardecl()` as a list; do not call a recursive-only rule such
+  as `ctx.vardecls()` when it does not exist.
 
 ### Implement the reference answer
 
@@ -84,6 +119,9 @@ Print columns equivalent to `Test | Expected | Got | Status`.
 - Print a concise `Reason` with expected/actual mismatch or exception details.
 - Continue after failures.
 - Return exit code 0 only when all selected tests pass.
+- An individual runner must report only its own tests and its own summary.
+- Exceptions caused by an incomplete student implementation must be reported as
+  `FAIL` with the exception type/message, without stopping later test cases.
 
 ### Validation
 
@@ -95,6 +133,8 @@ Run:
 4. Each student runner without `--answer`; skeleton cases should fail with useful Expected/Got/Reason output.
 5. Root reference runner with `--answer`; confirm exit code 0.
 6. A deliberate mismatch and malformed input when relevant.
+7. Run at least one individual exercise command and verify that no neighboring
+	exercise output appears.
 
 Do not claim success unless commands were actually run. Report missing prerequisites such as Java, ANTLR, or package installation.
 
