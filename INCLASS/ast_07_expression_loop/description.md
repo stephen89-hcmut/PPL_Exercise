@@ -46,3 +46,5 @@ Chạy đáp án tham khảo:
 ```bash
 .venv/bin/python INCLASS/ast_07_expression_loop/main.py --answer
 ```
+
+Không có `--answer` chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

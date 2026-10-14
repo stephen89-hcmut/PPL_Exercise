@@ -1,9 +1,32 @@
-# Bai 4 - Functional Programming: flatten
+# Bài 4 - Functional Programming: flatten
 
-Viet ba ham flatten danh sach cac danh sach thanh mot danh sach phang:
+## Đề bài
 
-- `flatten_lst_comp(lst)`: list comprehension.
-- `flatten_recursive(lst)`: de quy.
-- `flatten_higher_order(lst)`: higher-order function.
+Viết ba hàm flatten danh sách các danh sách thành một danh sách phẳng:
 
-Vi du: `flatten([[1, 2, 3], ['a', 'b', 'c']])` cho `[1, 2, 3, 'a', 'b', 'c']`.
+```python
+def flatten_lst_comp(lst): ...
+def flatten_recursive(lst): ...
+def flatten_higher_order(lst): ...
+```
+
+Ba hàm lần lượt dùng list comprehension, đệ quy và higher-order function. Giữ nguyên tên hàm, tham số và trả về danh sách mới.
+
+## Expected Output
+
+| Test | Expected |
+| --- | --- |
+| `flatten_lst_comp([[1, 2, 3], ['a', 'b', 'c']])` | `[1, 2, 3, 'a', 'b', 'c']` |
+| `flatten_lst_comp([])` | `[]` |
+| `flatten_lst_comp([[1.1], [2.1, 3.1]])` | `[1.1, 2.1, 3.1]` |
+
+Runner áp dụng cùng expected values cho `flatten_recursive` và `flatten_higher_order`.
+
+## Run
+
+```bash
+.venv/bin/python INCLASS/functional_04_flatten/main.py
+.venv/bin/python INCLASS/functional_04_flatten/main.py --answer
+```
+
+Không có `--answer` chạy skeleton sinh viên; `--answer` chạy reference answer.

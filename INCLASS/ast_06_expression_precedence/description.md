@@ -40,3 +40,5 @@ Chạy đáp án tham khảo:
 ```bash
 .venv/bin/python INCLASS/ast_06_expression_precedence/main.py --answer
 ```
+
+Không có `--answer` chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

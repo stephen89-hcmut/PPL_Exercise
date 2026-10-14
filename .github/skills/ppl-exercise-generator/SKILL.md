@@ -22,7 +22,32 @@ The output must let a student edit the skeleton, run tests, see PASS/FAIL and fa
 - Find the project root and preserve its existing language, framework, naming, and test conventions.
 - If the workspace is empty, create a minimal runnable structure.
 - Check the runtime, package manager, parser generator, and dependencies before editing.
+- Resolve the project interpreter before running or documenting any command. Prefer an existing workspace environment such as `.venv/bin/python` (macOS/Linux) or `.venv\\Scripts\\python.exe` (Windows); otherwise use the repository's configured interpreter.
+- Use the same resolved interpreter for package installation, parser generation, syntax checks, reference tests, student tests, and commands written in `description.md`. Do not assume the system `python` or `python3` has project dependencies.
+- Verify imports for required runtime packages before executing generated code. For ANTLR Python projects, verify `antlr4` from `antlr4-python3-runtime` in the resolved interpreter.
 - Never overwrite unrelated user changes.
+
+### Environment and dependency setup
+
+Before editing or validation:
+
+1. Detect the repository interpreter. If `.venv` exists, use its Python executable unless the repository explicitly specifies another environment.
+2. Check the dependency file and test imports with that interpreter, for example:
+
+  ```bash
+  .venv/bin/python -c "import antlr4; print('antlr4 runtime: OK')"
+  ```
+
+3. If a required package is missing, install the repository dependency file into that same environment, for example:
+
+  ```bash
+  .venv/bin/python -m pip install -r requirements.txt
+  ```
+
+4. Re-run the import check before running tests. Never fix a project dependency by installing into an unrelated global Python environment without documenting that choice.
+5. Put the resolved interpreter in every setup, generation, test, and individual-runner command documented for students. If no environment exists, document the exact interpreter and installation command used.
+
+For generated-parser projects, also verify that the generated modules are present after parser generation and that the runtime import succeeds from the same interpreter. A successful Java/ANTLR generation step alone does not prove that Python can import the generated visitor.
 
 ### Extract the contract
 
@@ -83,6 +108,7 @@ Rules:
 - `Đề bài` must include the task requirements and the relevant skeleton/API, not only a short summary.
 - `Expected Output` must include all Expected values supplied by the user and the corresponding inputs. Do not omit cases that demonstrate a common failure.
 - `Run` must contain commands for the isolated exercise runner. Include `--answer` when the project provides a reference answer and explain that removing it runs the student skeleton.
+- Commands in `Run` must use the resolved project interpreter, not an unverified system command such as bare `python` or `python3`.
 - Do not replace the required sections with only a link to another document. Additional sections may follow `Run`.
 
 ### Preserve skeleton semantics
@@ -135,6 +161,7 @@ Run:
 6. A deliberate mismatch and malformed input when relevant.
 7. Run at least one individual exercise command and verify that no neighboring
 	exercise output appears.
+8. Run the exact interpreter-qualified command copied into the exercise's `Run` section, including from a clean terminal context when possible. Confirm that dependency errors such as `ModuleNotFoundError` do not occur.
 
 Do not claim success unless commands were actually run. Report missing prerequisites such as Java, ANTLR, or package installation.
 

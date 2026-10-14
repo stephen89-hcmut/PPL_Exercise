@@ -45,3 +45,5 @@ Chạy đáp án tham khảo:
 ```bash
 .venv/bin/python INCLASS/ast_05_expression_recursive/main.py --answer
 ```
+
+Không có `--answer` chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.
