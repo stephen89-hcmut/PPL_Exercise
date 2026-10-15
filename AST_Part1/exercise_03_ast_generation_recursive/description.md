@@ -47,8 +47,22 @@ mac dinh dung code sinh vien; them `--answer` de xem dap an tham khao.
 
 Visitor tao cac node `Program`, `VarDecl`, `Id`, `IntType` va `FloatType`. `visitIds` tra ve danh sach Id, sau do `visitVardecl` tao mot VarDecl cho moi Id.
 
-## Chay
+## Run
+
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe AST_Part1\setup.py` để generate parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\setup.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_03_ast_generation_recursive\main.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_03_ast_generation_recursive\main.py --answer
+```
+
+Trên Linux/macOS:
 
 ```bash
+.venv/bin/python AST_Part1/setup.py
 .venv/bin/python AST_Part1/exercise_03_ast_generation_recursive/main.py
+.venv/bin/python AST_Part1/exercise_03_ast_generation_recursive/main.py --answer
 ```
+
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

@@ -11,6 +11,19 @@ Moi bai co `solution.py` la skeleton cho sinh vien, `answer.py` la dap an tham k
 
 ## Chay tung bai
 
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe OOP\oop_01_eval\main.py
+.\.venv\Scripts\python.exe OOP\oop_01_eval\main.py --answer
+.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py
+.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py --answer
+.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py
+.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py --answer
+```
+
+Linux/macOS:
+
 ```bash
 .venv/bin/python OOP/oop_01_eval/main.py --answer
 .venv/bin/python OOP/oop_02_print_prefix/main.py --answer
@@ -24,6 +37,14 @@ Bo `--answer` de chay skeleton sinh vien:
 ```
 
 ## Chay tat ca
+
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe OOP\run_all.py --answer
+```
+
+Linux/macOS:
 
 ```bash
 .venv/bin/python OOP/run_all.py --answer

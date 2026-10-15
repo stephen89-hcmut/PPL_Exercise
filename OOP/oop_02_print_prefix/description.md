@@ -4,10 +4,10 @@
 
 Mở rộng các lớp `Exp`, `BinExp`, `UnExp`, `IntLit` và `FloatLit` để cài đặt:
 
-```python
+``python
 printPrefix() -> str
 printPostfix() -> str
-```
+``
 
 Biểu thức nhị phân in operator trước hoặc sau hai operand. Unary `+` và `-` phải được in thành `+.` và `-.` để phân biệt với operator nhị phân. Các token trong chuỗi được ngăn cách bằng một dấu cách; literal được chuyển thành chuỗi bằng giá trị của nó. Giữ nguyên constructors và các method trong skeleton.
 
@@ -24,9 +24,18 @@ Biểu thức nhị phân in operator trước hoặc sau hai operand. Unary `+`
 
 ## Run
 
+Từ thư mục repository root: Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py
+.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py --answer
+```
+
+Trên Linux/macOS:
+
 ```bash
 .venv/bin/python OOP/oop_02_print_prefix/main.py
 .venv/bin/python OOP/oop_02_print_prefix/main.py --answer
 ```
 
-Không có `--answer` chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu. Runner bài này kiểm tra cả prefix và postfix.
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

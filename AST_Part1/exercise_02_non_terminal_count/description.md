@@ -35,8 +35,22 @@ dinh chay skeleton; them `--answer` de chay dap an tham khao.
 
 `int a;` cho ket qua 6, `int a,b;` cho 7, sau do la 10, 11 va 13 theo cac test trong de.
 
-## Chay
+## Run
+
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe AST_Part1\setup.py` để generate parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\setup.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_02_non_terminal_count\main.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_02_non_terminal_count\main.py --answer
+```
+
+Trên Linux/macOS:
 
 ```bash
+.venv/bin/python AST_Part1/setup.py
 .venv/bin/python AST_Part1/exercise_02_non_terminal_count/main.py
+.venv/bin/python AST_Part1/exercise_02_non_terminal_count/main.py --answer
 ```
+
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

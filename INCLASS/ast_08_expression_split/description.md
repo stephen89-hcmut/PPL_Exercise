@@ -4,18 +4,18 @@
 
 Cho grammar có các rule operator riêng:
 
-```antlr
+``antlr
 grammar X;
 exp: term (addop term)*;
 addop: ADDOP|SUBOP;
 term: (factor mulop)* factor;
 mulop: MULOP|DIVOP;
 factor: ID | INTLIT | '(' exp ')';
-```
+``
 
 Hãy implement các method của `ASTGeneration`:
 
-```python
+``python
 class ASTGeneration(XVisitor):
 	def visitExp(self, ctx: XParser.ExpContext):
 		return None
@@ -28,7 +28,7 @@ class ASTGeneration(XVisitor):
 
 	def visitMulop(self, ctx: XParser.MulopContext):
 		return None
-```
+``
 
 Khi duyệt loop, phải tạo AST left-associative và lấy operator thông qua
 `visitAddop`/`visitMulop`.
@@ -42,16 +42,20 @@ Khi duyệt loop, phải tạo AST left-associative và lấy operator thông qu
 
 ## Run
 
-Chạy skeleton sinh viên:
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
 
-```bash
-.venv/bin/python INCLASS/ast_08_expression_split/main.py
+```powershell
+.\.venv\Scripts\python.exe INCLASS\setup.py
+.\.venv\Scripts\python.exe INCLASS\ast_08_expression_split\main.py
+.\.venv\Scripts\python.exe INCLASS\ast_08_expression_split\main.py --answer
 ```
 
-Chạy đáp án tham khảo:
+Trên Linux/macOS:
 
 ```bash
+.venv/bin/python INCLASS/setup.py
+.venv/bin/python INCLASS/ast_08_expression_split/main.py
 .venv/bin/python INCLASS/ast_08_expression_split/main.py --answer
 ```
 
-Không có `--answer` chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

@@ -4,11 +4,11 @@
 
 Thay vì thêm method mới vào các lớp biểu thức cho mỗi tác vụ, hãy dùng Visitor pattern. Các lớp `Exp`, `BinExp`, `UnExp`, `IntLit` và `FloatLit` phải cung cấp cơ chế:
 
-```python
+``python
 x.accept(Eval())
 x.accept(PrintPrefix())
 x.accept(PrintPostfix())
-```
+``
 
 Trong đó:
 
@@ -32,9 +32,18 @@ Hãy hoàn thành các method `accept` và các method `visitBinExp`, `visitUnEx
 
 ## Run
 
+Từ thư mục repository root: Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py
+.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py --answer
+```
+
+Trên Linux/macOS:
+
 ```bash
 .venv/bin/python OOP/oop_03_visitor/main.py
 .venv/bin/python OOP/oop_03_visitor/main.py --answer
 ```
 
-Lệnh đầu chạy skeleton sinh viên; `--answer` chạy reference answer. Runner kiểm tra đồng thời evaluation, prefix và postfix.
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

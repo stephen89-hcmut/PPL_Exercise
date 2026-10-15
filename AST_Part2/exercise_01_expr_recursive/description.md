@@ -4,13 +4,13 @@
 
 Cho grammar MP:
 
-```text
+``text
 program: exp EOF;
 exp: term ASSIGN exp | term;
 term: factor COMPARE factor | factor;
 factor: factor ANDOR operand | operand;
 operand: ID | INTLIT | BOOLIT | '(' exp ')';
-```
+``
 
 Hãy hoàn thành các phương thức của `ASTGeneration` trong `solution.py` để sinh AST. Các node cần dùng là `Binary(op, left, right)`, `Id(value)`, `IntLiteral(value)` và `BooleanLiteral(value)`. Giữ nguyên tên lớp, visitor base class và chữ ký phương thức; không đặt lời giải vào skeleton.
 
@@ -24,11 +24,20 @@ Hãy hoàn thành các phương thức của `ASTGeneration` trong `solution.py`
 
 ## Run
 
-```bash
-python AST_Part2/setup.py
-python AST_Part2/exercise_01_expr_recursive/main.py
-python AST_Part2/exercise_01_expr_recursive/main.py --answer
-python AST_Part2/exercise_01_expr_recursive/main.py --demo-failure
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe AST_Part2\setup.py` để generate parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part2\setup.py
+.\.venv\Scripts\python.exe AST_Part2\exercise_01_expr_recursive\main.py
+.\.venv\Scripts\python.exe AST_Part2\exercise_01_expr_recursive\main.py --answer
 ```
 
-Bỏ `--answer` để chạy skeleton sinh viên.
+Trên Linux/macOS:
+
+```bash
+.venv/bin/python AST_Part2/setup.py
+.venv/bin/python AST_Part2/exercise_01_expr_recursive/main.py
+.venv/bin/python AST_Part2/exercise_01_expr_recursive/main.py --answer
+```
+
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

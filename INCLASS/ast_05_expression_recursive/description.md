@@ -4,22 +4,22 @@
 
 Cho grammar biểu thức trong ANTLR4:
 
-```antlr
+``antlr
 grammar X;
 exp: exp ADDOP term | exp SUBOP term | term;
 term: factor MULOP term | factor DIVOP term | factor;
 factor: ID | INTLIT | '(' exp ')';
-```
+``
 
 Các lớp AST:
 
-```python
+``python
 class Expr(ABC): pass
 class Num(Expr):  # val: int
 class Var(Expr):  # name: str
 class BinOp(Expr):  # op: str, left: Expr, right: Expr
 class UnOp(Expr):  # op: str, arg: Expr
-```
+``
 
 Hãy implement các method `visitExp`, `visitTerm`, `visitFactor` của class
 `ASTGeneration`, là subclass của visitor được ANTLR4 generate, để sinh AST từ
@@ -34,16 +34,20 @@ biểu thức đầu vào. Cần xử lý số nguyên, biến và biểu thức
 
 ## Run
 
-Chạy skeleton sinh viên:
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
 
-```bash
-.venv/bin/python INCLASS/ast_05_expression_recursive/main.py
+```powershell
+.\.venv\Scripts\python.exe INCLASS\setup.py
+.\.venv\Scripts\python.exe INCLASS\ast_05_expression_recursive\main.py
+.\.venv\Scripts\python.exe INCLASS\ast_05_expression_recursive\main.py --answer
 ```
 
-Chạy đáp án tham khảo:
+Trên Linux/macOS:
 
 ```bash
+.venv/bin/python INCLASS/setup.py
+.venv/bin/python INCLASS/ast_05_expression_recursive/main.py
 .venv/bin/python INCLASS/ast_05_expression_recursive/main.py --answer
 ```
 
-Không có `--answer` chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

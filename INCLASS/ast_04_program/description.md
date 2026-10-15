@@ -4,12 +4,12 @@
 
 Cho grammar:
 
-```antlr
+``antlr
 program: vardecl+ EOF;
 vardecl: ids COLON typ;
 ids: ID (CM ID)*;
 typ: INTTYPE | FLOATTYPE;
-```
+``
 
 AST dùng `Program(decl)`, `VarDecl(name, typ)`, `IntType` và `FloatType`. Hãy hoàn thành `visitProgram` trong `ASTGeneration` để duyệt mọi declaration và flatten các danh sách `VarDecl` thành một danh sách duy nhất trong `Program`. Không được tạo list of lists. Các method/API và skeleton trong `solution.py` phải được giữ nguyên.
 
@@ -21,8 +21,20 @@ AST dùng `Program(decl)`, `VarDecl(name, typ)`, `IntType` và `FloatType`. Hãy
 
 ## Run
 
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe INCLASS\setup.py
+.\.venv\Scripts\python.exe INCLASS\ast_04_program\main.py
+.\.venv\Scripts\python.exe INCLASS\ast_04_program\main.py --answer
+```
+
+Trên Linux/macOS:
+
 ```bash
+.venv/bin/python INCLASS/setup.py
 .venv/bin/python INCLASS/ast_04_program/main.py
 .venv/bin/python INCLASS/ast_04_program/main.py --answer
 ```
-Lệnh đầu chạy skeleton sinh viên; thêm `--answer` để chạy lời giải tham chiếu.
+
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

@@ -36,19 +36,31 @@ Quy uoc: terminal co height 1; node khong co con co height 1; node co con co hei
 
 ## Grammar
 
-```text
+``text
 program: vardecls EOF;
 vardecls: vardecl vardecltail;
 vardecltail: vardecl vardecltail | ;
 vardecl: mptype ids ';';
 mptype: INTTYPE | FLOATTYPE;
 ids: ID ',' ids | ID;
+``
+
+## Run
+
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe AST_Part1\setup.py` để generate parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\setup.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py --answer
 ```
 
-## Chay
+Trên Linux/macOS:
 
 ```bash
+.venv/bin/python AST_Part1/setup.py
 .venv/bin/python AST_Part1/exercise_01_height/main.py
+.venv/bin/python AST_Part1/exercise_01_height/main.py --answer
 ```
 
-Bai co test cho ca `program` va cac rule con `mptype`, `ids`, `vardecl`, `vardecls`.
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

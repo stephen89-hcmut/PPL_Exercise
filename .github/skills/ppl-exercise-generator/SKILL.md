@@ -27,6 +27,40 @@ The output must let a student edit the skeleton, run tests, see PASS/FAIL and fa
 - Verify imports for required runtime packages before executing generated code. For ANTLR Python projects, verify `antlr4` from `antlr4-python3-runtime` in the resolved interpreter.
 - Never overwrite unrelated user changes.
 
+### Cross-platform documentation commands
+
+Every generated exercise `description.md` must use a `## Run` section with
+both platform forms. For parser-based groups, document setup before the
+individual runner:
+
+````markdown
+## Run
+
+Từ thư mục repository root, trước tiên chạy `GROUP/setup.py` để generate
+parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe GROUP\setup.py
+.\.venv\Scripts\python.exe GROUP\EXERCISE\main.py
+.\.venv\Scripts\python.exe GROUP\EXERCISE\main.py --answer
+```
+
+Trên Linux/macOS:
+
+```bash
+.venv/bin/python GROUP/setup.py
+.venv/bin/python GROUP/EXERCISE/main.py
+.venv/bin/python GROUP/EXERCISE/main.py --answer
+```
+
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.
+````
+
+For OOP exercises, omit the setup command and keep the two runner commands in
+both platform blocks. Never document `.venv/bin/python` as a Windows command,
+and never use bare `python` or `python3` when the project virtual environment
+is available.
+
 ### Environment and dependency setup
 
 Before editing or validation:

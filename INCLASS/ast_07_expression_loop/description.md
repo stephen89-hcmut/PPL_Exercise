@@ -4,23 +4,23 @@
 
 Thay grammar biểu thức bằng dạng vòng lặp:
 
-```antlr
+``antlr
 grammar X;
 exp: term ((ADDOP|SUBOP) term)*;
 term: (factor (MULOP|DIVOP))* factor;
 factor: ID | INTLIT | '(' exp ')';
-```
+``
 
 Skeleton cần implement:
 
-```python
+``python
 class ASTGeneration(XVisitor):
 	def visitExp(self, ctx: XParser.ExpContext):
 		return None
 
 	def visitTerm(self, ctx: XParser.TermContext):
 		return None
-```
+``
 
 Hãy tự tạo AST left-associative khi duyệt các operator trong loop. Có thể dùng
 visitor mặc định cho `factor` hoặc bổ sung method cần thiết để xử lý `ID`,
@@ -35,16 +35,20 @@ visitor mặc định cho `factor` hoặc bổ sung method cần thiết để x
 
 ## Run
 
-Chạy skeleton sinh viên:
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
 
-```bash
-.venv/bin/python INCLASS/ast_07_expression_loop/main.py
+```powershell
+.\.venv\Scripts\python.exe INCLASS\setup.py
+.\.venv\Scripts\python.exe INCLASS\ast_07_expression_loop\main.py
+.\.venv\Scripts\python.exe INCLASS\ast_07_expression_loop\main.py --answer
 ```
 
-Chạy đáp án tham khảo:
+Trên Linux/macOS:
 
 ```bash
+.venv/bin/python INCLASS/setup.py
+.venv/bin/python INCLASS/ast_07_expression_loop/main.py
 .venv/bin/python INCLASS/ast_07_expression_loop/main.py --answer
 ```
 
-Không có `--answer` chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

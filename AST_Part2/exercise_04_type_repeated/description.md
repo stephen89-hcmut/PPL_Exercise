@@ -4,14 +4,14 @@
 
 Cho grammar MP:
 
-```text
+``text
 program: mptype EOF;
 arraytype: primtype dimen | arraytype dimen;
 mptype: primtype | arraytype;
 primtype: INTTYPE | FLOATTYPE;
 dimen: '[' num '..' num ']';
 num: '-'? INTLIT;
-```
+``
 
 Hãy hoàn thành `ASTGeneration` trong `solution.py`. Mỗi dimension tạo một `RangeType`; nhiều dimension phải được gộp vào `UnionType` theo thứ tự xuất hiện, và kiểu phần tử giữ nguyên là `IntType` hoặc `FloatType`.
 
@@ -25,11 +25,20 @@ Hãy hoàn thành `ASTGeneration` trong `solution.py`. Mỗi dimension tạo m�
 
 ## Run
 
-```bash
-python AST_Part2/setup.py
-python AST_Part2/exercise_04_type_repeated/main.py
-python AST_Part2/exercise_04_type_repeated/main.py --answer
-python AST_Part2/exercise_04_type_repeated/main.py --demo-failure
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe AST_Part2\setup.py` để generate parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part2\setup.py
+.\.venv\Scripts\python.exe AST_Part2\exercise_04_type_repeated\main.py
+.\.venv\Scripts\python.exe AST_Part2\exercise_04_type_repeated\main.py --answer
 ```
 
-Bỏ `--answer` để chạy skeleton sinh viên.
+Trên Linux/macOS:
+
+```bash
+.venv/bin/python AST_Part2/setup.py
+.venv/bin/python AST_Part2/exercise_04_type_repeated/main.py
+.venv/bin/python AST_Part2/exercise_04_type_repeated/main.py --answer
+```
+
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

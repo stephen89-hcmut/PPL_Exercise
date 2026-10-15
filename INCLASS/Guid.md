@@ -10,6 +10,21 @@
 
 ## Chay
 
+Windows PowerShell dùng `.\.venv\Scripts\python.exe`; Linux/macOS dùng
+`.venv/bin/python`. Trước khi chạy bài ANTLR, phải generate parser:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe INCLASS\setup.py
+```
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python INCLASS/setup.py
+```
+
 Generate parser:
 
 ```bash
@@ -46,6 +61,13 @@ Chay tung bai rieng:
 .venv/bin/python INCLASS/ast_06_expression_precedence/main.py --answer
 .venv/bin/python INCLASS/ast_07_expression_loop/main.py --answer
 .venv/bin/python INCLASS/ast_08_expression_split/main.py --answer
+```
+
+Ví dụ Windows PowerShell cho bài đầu tiên:
+
+```powershell
+.\.venv\Scripts\python.exe INCLASS\ast_01_ids_recursive\main.py
+.\.venv\Scripts\python.exe INCLASS\ast_01_ids_recursive\main.py --answer
 ```
 
 Bo `--answer` de chay skeleton sinh vien. Sua `solution.py`, khong sua `answer.py`.

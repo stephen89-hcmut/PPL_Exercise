@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "generated" / "XDecl"))
 from XDeclVisitor import XDeclVisitor
-from common.ast_nodes import Decl
+from common.ast_nodes import FloatType, IntType, VarDecl
 from common.parser_utils import parse
 
 

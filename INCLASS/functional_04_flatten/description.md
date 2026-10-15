@@ -4,11 +4,11 @@
 
 Viết ba hàm flatten danh sách các danh sách thành một danh sách phẳng:
 
-```python
+``python
 def flatten_lst_comp(lst): ...
 def flatten_recursive(lst): ...
 def flatten_higher_order(lst): ...
-```
+``
 
 Ba hàm lần lượt dùng list comprehension, đệ quy và higher-order function. Giữ nguyên tên hàm, tham số và trả về danh sách mới.
 
@@ -24,9 +24,20 @@ Runner áp dụng cùng expected values cho `flatten_recursive` và `flatten_hig
 
 ## Run
 
+Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe INCLASS\setup.py
+.\.venv\Scripts\python.exe INCLASS\functional_04_flatten\main.py
+.\.venv\Scripts\python.exe INCLASS\functional_04_flatten\main.py --answer
+```
+
+Trên Linux/macOS:
+
 ```bash
+.venv/bin/python INCLASS/setup.py
 .venv/bin/python INCLASS/functional_04_flatten/main.py
 .venv/bin/python INCLASS/functional_04_flatten/main.py --answer
 ```
 
-Không có `--answer` chạy skeleton sinh viên; `--answer` chạy reference answer.
+Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

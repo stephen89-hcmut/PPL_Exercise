@@ -19,7 +19,15 @@ antlr4-python3-runtime==4.13.2
 
 ## 2. Cai dat
 
-Tai thu muc project:
+Tai thu muc project. Trên Windows dùng `py`; trên Linux/macOS dùng
+`python3`:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe AST_Part1\setup.py
+.\.venv\Scripts\python.exe INCLASS\setup.py
+```
 
 ```bash
 python3 -m venv .venv
@@ -34,11 +42,34 @@ python3 -m venv .venv
 ANTLR_VERSION=4.13.2 .venv/bin/python AST_Part1/setup.py
 ```
 
+Trên PowerShell, đặt biến môi trường tương đương bằng:
+
+```powershell
+$env:ANTLR_VERSION = "4.13.2"
+.\.venv\Scripts\python.exe AST_Part1\setup.py
+```
+
 Hoac dat duong dan jar bang bien `ANTLR_JAR` trong moi truong cua ban va dieu chinh script neu can dung jar noi bo.
+
+## 2.1. Chon lenh Python theo he dieu hanh
+
+Sau khi tạo virtual environment, luôn dùng đúng executable của môi trường đó:
+
+| He dieu hanh | Python executable |
+| --- | --- |
+| Windows PowerShell | `.\.venv\Scripts\python.exe` |
+| Linux/macOS | `.venv/bin/python` |
+
+Không dùng `.venv/bin/python` trong PowerShell. Nếu chưa chạy bước setup,
+parser generated chưa tồn tại và bài ANTLR sẽ báo lỗi thiếu `*Visitor`.
 
 ## 3. Chay bai tap
 
 Chay tat ca dap an tham khao:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\run_all.py --answer
+```
 
 ```bash
 .venv/bin/python AST_Part1/run_all.py --answer
@@ -46,11 +77,22 @@ Chay tat ca dap an tham khao:
 
 Chay tat ca skeleton de xem cac test dang cho:
 
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\run_all.py
+```
+
 ```bash
 .venv/bin/python AST_Part1/run_all.py
 ```
 
 Chay tung bai:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_02_non_terminal_count\main.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_03_ast_generation_recursive\main.py
+.\.venv\Scripts\python.exe AST_Part1\exercise_04_ast_generation_repeated\main.py
+```
 
 ```bash
 .venv/bin/python AST_Part1/exercise_01_height/main.py
@@ -60,6 +102,13 @@ Chay tung bai:
 ```
 
 Chay dap an tham khao cua tung bai AST_Part1 bang cach them `--answer`:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py --answer
+.\.venv\Scripts\python.exe AST_Part1\exercise_02_non_terminal_count\main.py --answer
+.\.venv\Scripts\python.exe AST_Part1\exercise_03_ast_generation_recursive\main.py --answer
+.\.venv\Scripts\python.exe AST_Part1\exercise_04_ast_generation_repeated\main.py --answer
+```
 
 ```bash
 .venv/bin/python AST_Part1/exercise_01_height/main.py --answer
@@ -71,6 +120,10 @@ Chay dap an tham khao cua tung bai AST_Part1 bang cach them `--answer`:
 Moi dong report co dang `Test`, `Expected`, `Got`, `PASS`/`FAIL`. Neu parser loi, report in `ParseError`; neu ket qua khac expected, report in reason mismatch va van chay test tiep theo.
 
 De xem mot test fail mau:
+
+```powershell
+.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py --demo-failure
+```
 
 ```bash
 .venv/bin/python AST_Part1/exercise_01_height/main.py --demo-failure
