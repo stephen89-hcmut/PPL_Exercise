@@ -8,7 +8,7 @@ from common.parser_utils import parse
 
 class ASTGeneration(XIdsLoopVisitor):
     def visitIds(self, ctx):
-        return None
+        return None 
 
 
 def solve(source):
