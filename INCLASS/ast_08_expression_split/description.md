@@ -4,14 +4,7 @@
 
 Cho grammar có các rule operator riêng:
 
-``antlr
-grammar X;
-exp: term (addop term)*;
-addop: ADDOP|SUBOP;
-term: (factor mulop)* factor;
-mulop: MULOP|DIVOP;
-factor: ID | INTLIT | '(' exp ')';
-``
+``antlr grammar X; exp: term (addop term)*; addop: ADDOP|SUBOP; term: (factor mulop)* factor; mulop: MULOP|DIVOP; factor: ID | INTLIT | '(' exp ')'; ``
 
 Hãy implement các method của `ASTGeneration`:
 
@@ -35,8 +28,8 @@ Khi duyệt loop, phải tạo AST left-associative và lấy operator thông qu
 
 ## Expected Output
 
-| Input | Expected Output |
-|---|---|
+| Input         | Expected Output                                |
+| ------------- | ---------------------------------------------- |
 | `a * b / c` | `BinOp(/, BinOp(*, Var(a), Var(b)), Var(c))` |
 | `a + b - c` | `BinOp(-, BinOp(+, Var(a), Var(b)), Var(c))` |
 
