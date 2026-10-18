@@ -3,6 +3,8 @@
 Project gom hai nhom bai tap:
 
 - `AST_Part1`: parse tree Height, NonTerminalCount va AST generation MP.
+- `NAME`: name analysis, scope va undeclared-identifier exercises theo PDF
+  `Name Programming Code`.
 - `INCLASS`: Functional Programming va AST/Expression.
 
 ## 1. Yeu cau

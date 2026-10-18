@@ -33,3 +33,28 @@ Ví dụ chạy một bài INCLASS trên Windows:
 
 Lệnh trên in các cột `Test`, `Expected`, `Got`, `Status` và `Reason` khi
 test thất bại. Dùng `--answer` để chạy lời giải tham chiếu.
+
+## NAME
+
+`NAME` chứa bốn bài theo toàn bộ câu hỏi trong PDF
+`source/[CC03] Name Programming Code_ Attempt review _ BK-LMS.pdf`:
+
+1. `exercise_01_redeclared_declaration`: một exception chung cho duplicate.
+2. `exercise_02_redeclared_kind`: phân biệt variable và constant.
+3. `exercise_03_redeclared_nested`: function scope và nested redeclaration.
+4. `exercise_04_undeclared_identifier`: lookup theo scope và undeclared ID.
+
+Chạy reference answers trên Windows:
+
+```powershell
+.\.venv\Scripts\python.exe NAME\run_all.py --answer
+```
+
+Chạy trên Linux/macOS:
+
+```bash
+.venv/bin/python NAME/run_all.py --answer
+```
+
+Mỗi folder exercise có `description.md`, `solution.py`, `answer.py` và
+`main.py`; sinh viên chỉ sửa `solution.py`.
