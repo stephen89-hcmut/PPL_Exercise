@@ -13,17 +13,13 @@ class ASTGeneration(XExprSplitVisitor):
         return None
 
     def visitAddop(self, ctx):
-        if ctx.ADDOP():
-            return ctx.ADDOP().getText()
-        return ctx.SUBOP().getText() 
+        return None
 
     def visitTerm(self, ctx):
         return None
 
     def visitMulop(self, ctx):
-        if ctx.MULOP():
-            return ctx.MULOP().getText()
-        return ctx.DIVOP().getText()
+        return None
 
     def visitFactor(self, ctx):
         if ctx.ID():
