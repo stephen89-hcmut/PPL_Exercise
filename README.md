@@ -58,3 +58,20 @@ Chạy trên Linux/macOS:
 
 Mỗi folder exercise có `description.md`, `solution.py`, `answer.py` và
 `main.py`; sinh viên chỉ sửa `solution.py`.
+
+## Type_Part1
+
+`Type_Part1` được tạo từ PDF `[CC03] Type Programming Code 1` và
+`[CC03] Type Programming 2`, gồm năm bài: kiểm tra kiểu biểu thức, chương
+trình có khai báo biến, block scope và function call. Chạy reference answers:
+
+```powershell
+.\.venv\Scripts\python.exe Type_Part1\run_all.py --answer
+```
+
+```bash
+.venv/bin/python Type_Part1/run_all.py --answer
+```
+
+Bỏ `--answer` để chạy skeleton sinh viên. Xem thêm
+`Type_Part1/README.md` và `Type_Part1/Guid.md`.

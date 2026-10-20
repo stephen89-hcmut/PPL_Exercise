@@ -6,6 +6,8 @@ Project gom hai nhom bai tap:
 - `NAME`: name analysis, scope va undeclared-identifier exercises theo PDF
   `Name Programming Code`.
 - `INCLASS`: Functional Programming va AST/Expression.
+- `Type_Part1`: type checking cho expression, program, block va function theo
+  hai PDF Type Programming.
 
 ## 1. Yeu cau
 
@@ -130,6 +132,23 @@ De xem mot test fail mau:
 ```bash
 .venv/bin/python AST_Part1/exercise_01_height/main.py --demo-failure
 ```
+
+## 3.1. Type_Part1
+
+Nhom `Type_Part1` khong dung ANTLR; AST duoc tao truc tiep trong test runner.
+Sinh vien chi sua `solution.py` trong mot thu muc `exercise_*`. Chay reference
+answers:
+
+```powershell
+.\.venv\Scripts\python.exe Type_Part1\run_all.py --answer
+```
+
+```bash
+.venv/bin/python Type_Part1/run_all.py --answer
+```
+
+Chay rieng mot bai bang `main.py`; bo `--answer` de chay skeleton va them
+`--demo-failure` de xem bao cao FAIL mau.
 
 ## 4. INCLASS
 
