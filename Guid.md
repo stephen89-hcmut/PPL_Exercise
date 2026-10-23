@@ -232,6 +232,21 @@ TestCase("a,b,c", "4", "ids")
 
 Sau khi sua grammar, chay lai `AST_Part1/setup.py` de generate parser moi.
 
+## 6.1. ABSTRACT
+
+`ABSTRACT` gom 5 bai sinh ma theo PDF `[CC03] Abstract Programming Code`:
+`visitId`, `visitAssign`, `visitIf`, `visitWhile` va `visitFor`. Moi bai co
+`description.md`, `solution.py`, `answer.py`, `main.py`; chay dap an bang
+`ABSTRACT/run_all.py --answer`, bo `--answer` de xem skeleton, va dung
+`--demo-failure` de xem bao cao mismatch.
+
+## 6.2. SEQUENCE
+
+`SEQUENCE` gom 6 bai sinh ma tu PDF `[CC03] Sequence Programming Code`:
+literal int/float, hai dang `visitBinExpr`, `visitId` va `visitVarDecl`.
+Chay `SEQUENCE/run_all.py --answer` de kiem tra dap an tham khao; bo
+`--answer` de chay skeleton sinh vien.
+
 ## 7. Cau truc
 
 - `AST_Part1/grammar`: grammar ANTLR.
