@@ -247,6 +247,13 @@ literal int/float, hai dang `visitBinExpr`, `visitId` va `visitVarDecl`.
 Chay `SEQUENCE/run_all.py --answer` de kiem tra dap an tham khao; bo
 `--answer` de chay skeleton sinh vien.
 
+## 6.3. VM-CodeGeneration
+
+`VM-CodeGeneration` gom 5 bai tu PDF `[CC03]JVM&Code Programming`:
+`visitIntLiteral`, `visitFloatLiteral`, hai dang `visitBinExpr` va
+`visitId`. Chay `VM-CodeGeneration/run_all.py --answer` de kiem tra dap an
+tham khao; bo `--answer` de chay skeleton sinh vien.
+
 ## 7. Cau truc
 
 - `AST_Part1/grammar`: grammar ANTLR.
