@@ -1,31 +1,21 @@
-# Sequence 1 - visitIntLiteral
+# Question 1 — `visitIntLiteral`
 
-## Đề bài
+Assume `IntLiteral` has an integer field named `value`. `CodeGeneration` has
+an `emit` field containing an `Emitter`, and the `Frame` is in `o.frame`.
 
-Hoàn thành `visitIntLiteral(self, ctx, o)` cho AST `IntLiteral(value)`.
-Method phải dùng `emitPUSHICONST(ctx.value, o.frame)` và trả về cặp
-`(code, IntType())`.
+Write `visitIntLiteral(self, ctx, o)`. Return a pair containing Jasmin code
+that loads `ctx.value` onto the operand stack and an instance of the matching
+type subclass, `IntType`. Use
+`self.emit.emitPUSHICONST(ctx.value, o.frame)` to produce the code.
 
-## Expected Output
+The assessment examples are `IntLiteral(5)`, `IntLiteral(217)`,
+`IntLiteral(-1)`, `IntLiteral(371846)`, and `IntLiteral(2345)`. Their reported
+results are `b'5'`, `b'217'`, `b'-1'`, `b'371846'`, and `b'2345'`.
 
-| Input | Expected |
-| --- | --- |
-| `IntLiteral(5)` | `5` |
-| `IntLiteral(217)` | `217` |
-| `IntLiteral(-1)` | `-1` |
-| `IntLiteral(371846)` | `371846` |
-| `IntLiteral(2345)` | `2345` |
+The local runner displays the evaluated value without the assessment site's
+`b'…'` wrapper.
 
 ## Run
-
-Windows PowerShell:
-
-```powershell
-python3 SEQUENCE/exercise_01_visit_int_literal/main.py
-python3 SEQUENCE/exercise_01_visit_int_literal/main.py --answer
-```
-
-Linux/macOS:
 
 ```bash
 python3 SEQUENCE/exercise_01_visit_int_literal/main.py

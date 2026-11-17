@@ -1,16 +1,21 @@
 # SEQUENCE
 
-Sáu bài tập được tạo từ PDF `[CC03] Sequence Programming Code`:
+Questions 1–5 are aligned with the real assessment prompts provided:
 
-1. `visitIntLiteral`
-2. `visitFloatLiteral`
-3. `visitBinExpr` cho toán tử typed integer/float
-4. `visitId`
-5. `visitBinExpr` cho mixed numeric types và relational operators
-6. `visitVarDecl`
+1. `visitIntLiteral` emits an integer constant and returns `IntType`.
+2. `visitFloatLiteral` emits a float constant and returns `FloatType`.
+3. `visitBinExpr` handles typed integer and float arithmetic operators and
+   returns generated Jasmin code with the result type.
+4. `visitId` resolves local and global symbols in innermost to outermost order.
+5. `visitBinExpr` handles mixed numeric operations, promotions, and relations.
 
-Mỗi bài có `description.md`, `solution.py`, `answer.py` và `main.py`.
-Sinh viên sửa `solution.py`; `answer.py` là reference answer.
+Question 6 remains an additional practice task from the earlier local set; its
+assessment prompt was not provided.
+
+Each question has `description.md`, `solution.py`, `answer.py`, and `main.py`.
+Edit `solution.py`; `answer.py` contains the reference implementation. The
+local runner evaluates expressions to make the expected result easy to read;
+the assessment site wraps its output as bytes, for example `b'8'`.
 
 ## Run
 

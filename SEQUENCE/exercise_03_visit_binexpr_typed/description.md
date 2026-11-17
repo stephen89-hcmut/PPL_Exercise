@@ -1,32 +1,22 @@
-# Sequence 3 - typed visitBinExpr
+# Question 3 — typed `visitBinExpr`
 
-## Đề bài
+Assume `BinExpr` has fields `op` (`str`), `e1`, and `e2` (`Expr`). `Expr` is
+the superclass of `BinExpr`, `IntLiteral`, and `FloatLiteral`. Operators are
+`+`, `-`, `*`, `/`, `+.`, `-.`, `*.`, and `/.`. The first four take integer
+operands; dotted operators take float operands. No type errors occur.
 
-Hoàn thành `visitBinExpr(self, ctx, o)` cho các toán tử `+`, `-`, `*`, `/`,
-`+.`, `-.`, `*.`, `/.`. Bốn toán tử đầu làm việc trên `IntType`; các toán
-tử có dấu chấm làm việc trên `FloatType`. Trả về code biểu thức và kiểu kết
-quả tương ứng.
+Write `visitBinExpr(self, ctx, o)` in `CodeGeneration`. Return a pair with
+Jasmin code for the binary expression and an instance of the result type.
+The `Frame` is in `o.frame`, and `self.emit` is an `Emitter`. Integer
+operators return `IntType`; dotted operators return `FloatType`. Visit both
+children using the same `o`, concatenate their code in evaluation order, and
+append the matching arithmetic instruction from the emitter.
 
-## Expected Output
-
-| Input                    | Expected |
-| ------------------------ | -------- |
-| `5 + 3`                | `8`    |
-| `(5 - 3) * 3`          | `6`    |
-| `-1.0 +. 1.0`          | `0.0`  |
-| `1.0 *. (10.0 -. 2.0)` | `8.0`  |
-| `(5 - 3) / 3`          | `0`    |
+The examples cover `5 + 3`, `(5 - 3) * 3`, `-1.0 +. 1.0`,
+`1.0 *. (10.0 -. 2.0)`, and `(5 - 3) / 3`. The assessment reports results
+such as `b'8'`; the local runner omits the assessment site's `b'…'` wrapper.
 
 ## Run
-
-Windows PowerShell:
-
-```powershell
-python3 SEQUENCE/exercise_03_visit_binexpr_typed/main.py
-python3 SEQUENCE/exercise_03_visit_binexpr_typed/main.py --answer
-```
-
-Linux/macOS:
 
 ```bash
 python3 SEQUENCE/exercise_03_visit_binexpr_typed/main.py

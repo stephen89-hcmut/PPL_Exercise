@@ -6,16 +6,29 @@ from common.runtime import CName, FloatType, Id, Index, IntType, Symbol
 
 
 def case(name, value, typ):
-    return {"node": Id(name), "values": {name: value}, "symbols": [Symbol(name, typ, CName("Program"))]}
+    storage = Index(0) if name == "m" else CName("Program")
+    return {"node": Id(name), "values": {name: value}, "symbols": [Symbol(name, typ, storage)]}
+
+
+def shadowed_case():
+    return {
+        "node": Id("a"),
+        "values": {"a": 99},
+        "symbols": [
+            Symbol("a", IntType(), Index(0)),
+            Symbol("a", IntType(), CName("Program")),
+        ],
+    }
 
 
 TESTS = [
     TestCase("global integer a", "12", lambda: case("a", 12, IntType())),
-    TestCase("global integer z", "22", lambda: case("z", 22, IntType())),
+    TestCase("global integer z", "1222", lambda: case("z", 1222, IntType())),
     TestCase("global float x", "12.5", lambda: case("x", 12.5, FloatType())),
     TestCase("global float y", "1.25", lambda: case("y", 1.25, FloatType())),
     TestCase("global float n", "1.222", lambda: case("n", 1.222, FloatType())),
     TestCase("local integer m", "12220", lambda: case("m", 12220, IntType())),
+    TestCase("innermost shadowed a", "99", shadowed_case),
 ]
 
 if __name__ == "__main__":

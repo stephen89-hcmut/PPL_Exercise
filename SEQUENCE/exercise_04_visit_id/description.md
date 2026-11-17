@@ -1,32 +1,24 @@
-# Sequence 4 - visitId
+# Question 4 — `visitId`
 
-## Đề bài
+Assume `Id` has a string field `name`. `o.frame` is the current `Frame`, and
+`o.sym` is the symbol list. The list is ordered from the innermost environment
+to the global environment. Each `Symbol` has `name`, `mtype`, and `value`;
+`value` is either `Index(int)` for a local variable or `CName(str)` for a
+global variable.
 
-Hoàn thành `visitId(self, ctx, o)` để đọc giá trị identifier. Tìm symbol
-theo thứ tự từ môi trường gần nhất ra ngoài; với `Index` dùng
-`emitREADVAR`, với `CName` dùng `emitGETSTATIC`. Trả về `(code, s.mtype)`.
+Write `visitId(self, ctx, o)`. Find the first matching symbol and return a
+pair containing code that reads its value onto the operand stack and its
+type. For a local variable, call `emitREADVAR(name, mtype, index, o.frame)`;
+for a global variable, call `emitGETSTATIC(className/name, mtype, o.frame)`.
+The supplied answer also handles the `o.isLeft` write case with
+`emitWRITEVAR` or `emitPUTSTATIC`.
 
-## Expected Output
-
-| Input | Expected |
-| --- | --- |
-| `Id("a")` | `12` |
-| `Id("z")` | `22` |
-| `Id("x")` | `12.5` |
-| `Id("y")` | `1.25` |
-| `Id("n")` | `1.222` |
-| `Id("m")` | `12220` |
+Examples from the assessment include `a → b'12'`, `z → b'1222'`,
+`x → b'12.5'`, `y → b'1.25'`, `n → b'1.222'`, and local `m → b'12220'`.
+The local runner prints the underlying value without the assessment site's
+byte-string wrapper.
 
 ## Run
-
-Windows PowerShell:
-
-```powershell
-python3 SEQUENCE/exercise_04_visit_id/main.py
-python3 SEQUENCE/exercise_04_visit_id/main.py --answer
-```
-
-Linux/macOS:
 
 ```bash
 python3 SEQUENCE/exercise_04_visit_id/main.py

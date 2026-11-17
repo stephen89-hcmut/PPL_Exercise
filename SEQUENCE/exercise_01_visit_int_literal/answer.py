@@ -6,7 +6,8 @@ from common.runtime import CodeGeneration, IntType
 
 class AnswerCodeGeneration(CodeGeneration):
     def visitIntLiteral(self, ctx, o):
-        return ctx.value, IntType()
+        code = self.emit.emitPUSHICONST(ctx.value, o.frame)
+        return code, IntType()
 
 
 def solve(node):
