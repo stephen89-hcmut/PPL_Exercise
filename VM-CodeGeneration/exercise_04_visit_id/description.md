@@ -8,12 +8,12 @@ theo thứ tự từ môi trường gần nhất ra ngoài; với `Index` dùng
 
 ## Expected Output
 
-| Input       | Expected  |
-| ----------- | --------- |
-| `Id("a")` | `b'12'` |
-| `Id("z")` | `b'22'` |
-| `Id("x")` | `b'12.5'` |
-| `Id("y")` | `b'1.25'` |
+| Input       | Expected     |
+| ----------- | ------------ |
+| `Id("a")` | `b'12'`    |
+| `Id("z")` | `b'22'`    |
+| `Id("x")` | `b'12.5'`  |
+| `Id("y")` | `b'1.25'`  |
 | `Id("n")` | `b'1.222'` |
 | `Id("m")` | `b'12220'` |
 
