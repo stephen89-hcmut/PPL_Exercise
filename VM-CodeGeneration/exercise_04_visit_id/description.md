@@ -8,12 +8,12 @@ theo thứ tự từ môi trường gần nhất ra ngoài; với `Index` dùng
 
 ## Expected Output
 
-| Input | Expected |
-| --- | --- |
-| `Id("a")` | `12` |
-| `Id("z")` | `22` |
-| `Id("x")` | `12.5` |
-| `Id("y")` | `1.25` |
+| Input       | Expected  |
+| ----------- | --------- |
+| `Id("a")` | `12`    |
+| `Id("z")` | `22`    |
+| `Id("x")` | `12.5`  |
+| `Id("y")` | `1.25`  |
 | `Id("n")` | `1.222` |
 | `Id("m")` | `12220` |
 
@@ -29,6 +29,6 @@ Windows PowerShell:
 Linux/macOS:
 
 ```bash
-.venv/bin/python SEQUENCE/exercise_04_visit_id/main.py
-.venv/bin/python SEQUENCE/exercise_04_visit_id/main.py --answer
+.venv/bin/python VM-CodeGeneration/exercise_04_visit_id/main.py
+.venv/bin/python VM-CodeGeneration/exercise_04_visit_id/main.py --answer
 ```
