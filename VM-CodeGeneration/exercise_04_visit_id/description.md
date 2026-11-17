@@ -10,25 +10,25 @@ theo thứ tự từ môi trường gần nhất ra ngoài; với `Index` dùng
 
 | Input       | Expected  |
 | ----------- | --------- |
-| `Id("a")` | `12`    |
-| `Id("z")` | `22`    |
-| `Id("x")` | `12.5`  |
-| `Id("y")` | `1.25`  |
-| `Id("n")` | `1.222` |
-| `Id("m")` | `12220` |
+| `Id("a")` | `b'12'` |
+| `Id("z")` | `b'22'` |
+| `Id("x")` | `b'12.5'` |
+| `Id("y")` | `b'1.25'` |
+| `Id("n")` | `b'1.222'` |
+| `Id("m")` | `b'12220'` |
 
 ## Run
 
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe SEQUENCE\exercise_04_visit_id\main.py
-.\.venv\Scripts\python.exe SEQUENCE\exercise_04_visit_id\main.py --answer
+python3 VM-CodeGeneration/exercise_04_visit_id/main.py
+python3 VM-CodeGeneration/exercise_04_visit_id/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python VM-CodeGeneration/exercise_04_visit_id/main.py
-.venv/bin/python VM-CodeGeneration/exercise_04_visit_id/main.py --answer
+python3 VM-CodeGeneration/exercise_04_visit_id/main.py
+python3 VM-CodeGeneration/exercise_04_visit_id/main.py --answer
 ```

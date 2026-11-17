@@ -10,64 +10,64 @@
 
 ## Chay
 
-Windows PowerShell dùng `.\.venv\Scripts\python.exe`; Linux/macOS dùng
-`.venv/bin/python`. Trước khi chạy bài ANTLR, phải generate parser:
+Windows PowerShell dùng `python3`; Linux/macOS dùng
+`python3`. Trước khi chạy bài ANTLR, phải generate parser:
 
 ```powershell
 py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe INCLASS\setup.py
+python3 -m pip install -r requirements.txt
+python3 INCLASS/setup.py
 ```
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python INCLASS/setup.py
+python3 -m pip install -r requirements.txt
+python3 INCLASS/setup.py
 ```
 
 Generate parser:
 
 ```bash
-.venv/bin/python INCLASS/setup.py
+python3 INCLASS/setup.py
 ```
 
 Chay dap an tham khao:
 
 ```bash
-.venv/bin/python INCLASS/run_all.py --answer
+python3 INCLASS/run_all.py --answer
 ```
 
 Chay code sinh vien:
 
 ```bash
-.venv/bin/python INCLASS/run_all.py
+python3 INCLASS/run_all.py
 ```
 
 Chay tung bai rieng:
 
 ```bash
 # Functional Programming
-.venv/bin/python INCLASS/functional_03_double/main.py --answer
-.venv/bin/python INCLASS/functional_04_flatten/main.py --answer
-.venv/bin/python INCLASS/functional_05_less_than/main.py --answer
-.venv/bin/python INCLASS/functional_06_compose/main.py --answer
+python3 INCLASS/functional_03_double/main.py --answer
+python3 INCLASS/functional_04_flatten/main.py --answer
+python3 INCLASS/functional_05_less_than/main.py --answer
+python3 INCLASS/functional_06_compose/main.py --answer
 
 # AST va Expression
-.venv/bin/python INCLASS/ast_01_ids_recursive/main.py --answer
-.venv/bin/python INCLASS/ast_02_ids_loop/main.py --answer
-.venv/bin/python INCLASS/ast_03_vardecl/main.py --answer
-.venv/bin/python INCLASS/ast_04_program/main.py --answer
-.venv/bin/python INCLASS/ast_05_expression_recursive/main.py --answer
-.venv/bin/python INCLASS/ast_06_expression_precedence/main.py --answer
-.venv/bin/python INCLASS/ast_07_expression_loop/main.py --answer
-.venv/bin/python INCLASS/ast_08_expression_split/main.py --answer
+python3 INCLASS/ast_01_ids_recursive/main.py --answer
+python3 INCLASS/ast_02_ids_loop/main.py --answer
+python3 INCLASS/ast_03_vardecl/main.py --answer
+python3 INCLASS/ast_04_program/main.py --answer
+python3 INCLASS/ast_05_expression_recursive/main.py --answer
+python3 INCLASS/ast_06_expression_precedence/main.py --answer
+python3 INCLASS/ast_07_expression_loop/main.py --answer
+python3 INCLASS/ast_08_expression_split/main.py --answer
 ```
 
 Ví dụ Windows PowerShell cho bài đầu tiên:
 
 ```powershell
-.\.venv\Scripts\python.exe INCLASS\ast_01_ids_recursive\main.py
-.\.venv\Scripts\python.exe INCLASS\ast_01_ids_recursive\main.py --answer
+python3 INCLASS/ast_01_ids_recursive/main.py
+python3 INCLASS/ast_01_ids_recursive/main.py --answer
 ```
 
 Bo `--answer` de chay skeleton sinh vien. Sua `solution.py`, khong sua `answer.py`.

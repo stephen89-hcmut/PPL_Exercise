@@ -17,20 +17,20 @@ Các node AST gồm `VarDecl(name, typ)`, `IntType` và `FloatType`. Hãy hoàn 
 
 ## Run
 
-Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
+Từ thư mục PPL_Exercise, trước tiên chạy `python3 INCLASS/setup.py` để generate parser. Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe INCLASS\setup.py
-.\.venv\Scripts\python.exe INCLASS\ast_03_vardecl\main.py
-.\.venv\Scripts\python.exe INCLASS\ast_03_vardecl\main.py --answer
+python3 INCLASS/setup.py
+python3 INCLASS/ast_03_vardecl/main.py
+python3 INCLASS/ast_03_vardecl/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python INCLASS/setup.py
-.venv/bin/python INCLASS/ast_03_vardecl/main.py
-.venv/bin/python INCLASS/ast_03_vardecl/main.py --answer
+python3 INCLASS/setup.py
+python3 INCLASS/ast_03_vardecl/main.py
+python3 INCLASS/ast_03_vardecl/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

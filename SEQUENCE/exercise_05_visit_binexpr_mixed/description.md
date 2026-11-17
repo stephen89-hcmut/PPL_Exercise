@@ -25,13 +25,13 @@ sang `FloatType`; phép `/` luôn trả về `FloatType`. Các phép so sánh tr
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe SEQUENCE\exercise_05_visit_binexpr_mixed\main.py
-.\.venv\Scripts\python.exe SEQUENCE\exercise_05_visit_binexpr_mixed\main.py --answer
+python3 SEQUENCE/exercise_05_visit_binexpr_mixed/main.py
+python3 SEQUENCE/exercise_05_visit_binexpr_mixed/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python SEQUENCE/exercise_05_visit_binexpr_mixed/main.py
-.venv/bin/python SEQUENCE/exercise_05_visit_binexpr_mixed/main.py --answer
+python3 SEQUENCE/exercise_05_visit_binexpr_mixed/main.py
+python3 SEQUENCE/exercise_05_visit_binexpr_mixed/main.py --answer
 ```

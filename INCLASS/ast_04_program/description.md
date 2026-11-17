@@ -21,20 +21,20 @@ AST dùng `Program(decl)`, `VarDecl(name, typ)`, `IntType` và `FloatType`. Hãy
 
 ## Run
 
-Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
+Từ thư mục PPL_Exercise, trước tiên chạy `python3 INCLASS/setup.py` để generate parser. Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe INCLASS\setup.py
-.\.venv\Scripts\python.exe INCLASS\ast_04_program\main.py
-.\.venv\Scripts\python.exe INCLASS\ast_04_program\main.py --answer
+python3 INCLASS/setup.py
+python3 INCLASS/ast_04_program/main.py
+python3 INCLASS/ast_04_program/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python INCLASS/setup.py
-.venv/bin/python INCLASS/ast_04_program/main.py
-.venv/bin/python INCLASS/ast_04_program/main.py --answer
+python3 INCLASS/setup.py
+python3 INCLASS/ast_04_program/main.py
+python3 INCLASS/ast_04_program/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

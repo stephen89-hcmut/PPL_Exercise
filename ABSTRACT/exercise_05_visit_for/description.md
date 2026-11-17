@@ -18,13 +18,13 @@ nhật chỉ số. Gọi `enterLoop()`/`exitLoop()` để `break` và `continue`
 Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe ABSTRACT\exercise_05_visit_for\main.py
-.\.venv\Scripts\python.exe ABSTRACT\exercise_05_visit_for\main.py --answer
+python3 ABSTRACT/exercise_05_visit_for/main.py
+python3 ABSTRACT/exercise_05_visit_for/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python ABSTRACT/exercise_05_visit_for/main.py
-.venv/bin/python ABSTRACT/exercise_05_visit_for/main.py --answer
+python3 ABSTRACT/exercise_05_visit_for/main.py
+python3 ABSTRACT/exercise_05_visit_for/main.py --answer
 ```

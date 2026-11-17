@@ -33,15 +33,15 @@ API hoặc đổi cấu trúc AST.
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe NAME\exercise_02_redeclared_kind\main.py
-.\.venv\Scripts\python.exe NAME\exercise_02_redeclared_kind\main.py --answer
+python3 NAME/exercise_02_redeclared_kind/main.py
+python3 NAME/exercise_02_redeclared_kind/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python NAME/exercise_02_redeclared_kind/main.py
-.venv/bin/python NAME/exercise_02_redeclared_kind/main.py --answer
+python3 NAME/exercise_02_redeclared_kind/main.py
+python3 NAME/exercise_02_redeclared_kind/main.py --answer
 ```
 
 `--answer` chạy reference implementation; bỏ tùy chọn này để chạy skeleton

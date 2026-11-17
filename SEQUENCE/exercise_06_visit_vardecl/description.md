@@ -22,13 +22,13 @@ mới từ frame, in directive `.var`, rồi trả về
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe SEQUENCE\exercise_06_visit_vardecl\main.py
-.\.venv\Scripts\python.exe SEQUENCE\exercise_06_visit_vardecl\main.py --answer
+python3 SEQUENCE/exercise_06_visit_vardecl/main.py
+python3 SEQUENCE/exercise_06_visit_vardecl/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python SEQUENCE/exercise_06_visit_vardecl/main.py
-.venv/bin/python SEQUENCE/exercise_06_visit_vardecl/main.py --answer
+python3 SEQUENCE/exercise_06_visit_vardecl/main.py
+python3 SEQUENCE/exercise_06_visit_vardecl/main.py --answer
 ```

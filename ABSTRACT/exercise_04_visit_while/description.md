@@ -18,13 +18,13 @@ nhảy ra khi điều kiện sai, chạy thân vòng lặp và quay lại nhãn 
 Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe ABSTRACT\exercise_04_visit_while\main.py
-.\.venv\Scripts\python.exe ABSTRACT\exercise_04_visit_while\main.py --answer
+python3 ABSTRACT/exercise_04_visit_while/main.py
+python3 ABSTRACT/exercise_04_visit_while/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python ABSTRACT/exercise_04_visit_while/main.py
-.venv/bin/python ABSTRACT/exercise_04_visit_while/main.py --answer
+python3 ABSTRACT/exercise_04_visit_while/main.py
+python3 ABSTRACT/exercise_04_visit_while/main.py --answer
 ```

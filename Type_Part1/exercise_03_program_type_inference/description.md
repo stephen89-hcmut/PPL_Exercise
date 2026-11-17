@@ -36,15 +36,15 @@ Nếu hai phía đều chưa đủ thông tin để suy luận, ném
 Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe Type_Part1\exercise_03_program_type_inference\main.py
-.\.venv\Scripts\python.exe Type_Part1\exercise_03_program_type_inference\main.py --answer
+python3 Type_Part1/exercise_03_program_type_inference/main.py
+python3 Type_Part1/exercise_03_program_type_inference/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python Type_Part1/exercise_03_program_type_inference/main.py
-.venv/bin/python Type_Part1/exercise_03_program_type_inference/main.py --answer
+python3 Type_Part1/exercise_03_program_type_inference/main.py
+python3 Type_Part1/exercise_03_program_type_inference/main.py --answer
 ```
 
 Bỏ `--answer` để chạy skeleton sinh viên.

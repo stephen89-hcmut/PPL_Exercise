@@ -24,18 +24,18 @@ Biểu thức nhị phân in operator trước hoặc sau hai operand. Unary `+`
 
 ## Run
 
-Từ thư mục repository root: Trên Windows PowerShell:
+Từ thư mục PPL_Exercise: Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py
-.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py --answer
+python3 OOP/oop_02_print_prefix/main.py
+python3 OOP/oop_02_print_prefix/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python OOP/oop_02_print_prefix/main.py
-.venv/bin/python OOP/oop_02_print_prefix/main.py --answer
+python3 OOP/oop_02_print_prefix/main.py
+python3 OOP/oop_02_print_prefix/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

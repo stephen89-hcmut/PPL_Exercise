@@ -21,13 +21,13 @@ Method phải dùng `emitPUSHICONST(ctx.value, o.frame)` và trả về cặp
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe SEQUENCE\exercise_01_visit_int_literal\main.py
-.\.venv\Scripts\python.exe SEQUENCE\exercise_01_visit_int_literal\main.py --answer
+python3 SEQUENCE/exercise_01_visit_int_literal/main.py
+python3 SEQUENCE/exercise_01_visit_int_literal/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python SEQUENCE/exercise_01_visit_int_literal/main.py
-.venv/bin/python SEQUENCE/exercise_01_visit_int_literal/main.py --answer
+python3 SEQUENCE/exercise_01_visit_int_literal/main.py
+python3 SEQUENCE/exercise_01_visit_int_literal/main.py --answer
 ```

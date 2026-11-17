@@ -52,15 +52,15 @@ method, tham số hoặc exception.
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe NAME\exercise_04_undeclared_identifier\main.py
-.\.venv\Scripts\python.exe NAME\exercise_04_undeclared_identifier\main.py --answer
+python3 NAME/exercise_04_undeclared_identifier/main.py
+python3 NAME/exercise_04_undeclared_identifier/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python NAME/exercise_04_undeclared_identifier/main.py
-.venv/bin/python NAME/exercise_04_undeclared_identifier/main.py --answer
+python3 NAME/exercise_04_undeclared_identifier/main.py
+python3 NAME/exercise_04_undeclared_identifier/main.py --answer
 ```
 
 Mỗi runner chỉ chạy test của exercise này. Dùng `--answer` để xem kết quả

@@ -10,23 +10,25 @@ Năm bài tập được tạo từ PDF `[CC03]JVM&Code Programming`:
 
 Mỗi bài có `description.md`, `solution.py`, `answer.py` và `main.py`.
 Sinh viên chỉ sửa `solution.py`; `answer.py` là reference answer. Runtime
-nhỏ trong `common/runtime.py` mô phỏng protocol `CodeGeneration`, `Emitter`,
-`Frame`, `Type` và AST để test chạy độc lập mà không cần cài Jasmin.
+trong `common/runtime.py` cung cấp API `CodeGeneration`, `Emitter`, `Frame`,
+`Type` và AST tương thích với các visitor trong đề. Runner sinh Jasmin
+instruction, chạy tập instruction được dùng trong năm bài bằng VM nhỏ, rồi
+so sánh output dạng bytes (ví dụ `b'8'`) mà không cần cài Jasmin.
 
 ## Run
 
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe VM-CodeGeneration\run_all.py
-.\.venv\Scripts\python.exe VM-CodeGeneration\run_all.py --answer
-.\.venv\Scripts\python.exe VM-CodeGeneration\exercise_05_visit_binexpr_mixed\main.py --demo-failure
+python3 VM-CodeGeneration/run_all.py
+python3 VM-CodeGeneration/run_all.py --answer
+python3 VM-CodeGeneration/exercise_05_visit_binexpr_mixed/main.py --demo-failure
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python VM-CodeGeneration/run_all.py
-.venv/bin/python VM-CodeGeneration/run_all.py --answer
-.venv/bin/python VM-CodeGeneration/exercise_05_visit_binexpr_mixed/main.py --demo-failure
+python3 VM-CodeGeneration/run_all.py
+python3 VM-CodeGeneration/run_all.py --answer
+python3 VM-CodeGeneration/exercise_05_visit_binexpr_mixed/main.py --demo-failure
 ```

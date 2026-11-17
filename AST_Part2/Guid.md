@@ -16,18 +16,18 @@ Windows PowerShell:
 
 ```powershell
 py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe AST_Part2\setup.py
-.\.venv\Scripts\python.exe AST_Part2\exercise_01_expr_recursive\main.py
-.\.venv\Scripts\python.exe AST_Part2\exercise_01_expr_recursive\main.py --answer
+python3 -m pip install -r requirements.txt
+python3 AST_Part2/setup.py
+python3 AST_Part2/exercise_01_expr_recursive/main.py
+python3 AST_Part2/exercise_01_expr_recursive/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python AST_Part2/setup.py
-.venv/bin/python AST_Part2/exercise_01_expr_recursive/main.py
-.venv/bin/python AST_Part2/exercise_01_expr_recursive/main.py --answer
+python3 -m pip install -r requirements.txt
+python3 AST_Part2/setup.py
+python3 AST_Part2/exercise_01_expr_recursive/main.py
+python3 AST_Part2/exercise_01_expr_recursive/main.py --answer
 ```

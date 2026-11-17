@@ -22,13 +22,13 @@ theo thứ tự từ môi trường gần nhất ra ngoài; với `Index` dùng
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe SEQUENCE\exercise_04_visit_id\main.py
-.\.venv\Scripts\python.exe SEQUENCE\exercise_04_visit_id\main.py --answer
+python3 SEQUENCE/exercise_04_visit_id/main.py
+python3 SEQUENCE/exercise_04_visit_id/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python SEQUENCE/exercise_04_visit_id/main.py
-.venv/bin/python SEQUENCE/exercise_04_visit_id/main.py --answer
+python3 SEQUENCE/exercise_04_visit_id/main.py
+python3 SEQUENCE/exercise_04_visit_id/main.py --answer
 ```

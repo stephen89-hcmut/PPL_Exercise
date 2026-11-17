@@ -46,15 +46,15 @@ redeclaration.
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe NAME\exercise_03_redeclared_nested\main.py
-.\.venv\Scripts\python.exe NAME\exercise_03_redeclared_nested\main.py --answer
+python3 NAME/exercise_03_redeclared_nested/main.py
+python3 NAME/exercise_03_redeclared_nested/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python NAME/exercise_03_redeclared_nested/main.py
-.venv/bin/python NAME/exercise_03_redeclared_nested/main.py --answer
+python3 NAME/exercise_03_redeclared_nested/main.py
+python3 NAME/exercise_03_redeclared_nested/main.py --answer
 ```
 
 Runner chỉ in test của Exercise 3. `--answer` dùng lời giải tham chiếu; không

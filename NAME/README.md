@@ -19,13 +19,13 @@ selected with `--answer`; `--demo-failure` adds a deliberate mismatch.
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe NAME\run_all.py --answer
-.\.venv\Scripts\python.exe NAME\exercise_01_redeclared_declaration\main.py
+python3 NAME/run_all.py --answer
+python3 NAME/exercise_01_redeclared_declaration/main.py
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python NAME/run_all.py --answer
-.venv/bin/python NAME/exercise_01_redeclared_declaration/main.py
+python3 NAME/run_all.py --answer
+python3 NAME/exercise_01_redeclared_declaration/main.py
 ```

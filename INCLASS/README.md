@@ -8,38 +8,38 @@ Windows PowerShell:
 
 ```powershell
 py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe INCLASS\setup.py
+python3 -m pip install -r requirements.txt
+python3 INCLASS/setup.py
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python INCLASS/setup.py
+python3 -m pip install -r requirements.txt
+python3 INCLASS/setup.py
 ```
 
 ## Chay dap an tham khao
 
 ```bash
-.venv/bin/python INCLASS/run_all.py --answer
+python3 INCLASS/run_all.py --answer
 ```
 
 Trên Windows PowerShell, thay executable bằng
-`.\.venv\Scripts\python.exe` và dùng dấu `\` cho đường dẫn:
+`python3` và dùng dấu `/` cho đường dẫn:
 
 ```powershell
-.\.venv\Scripts\python.exe INCLASS\run_all.py --answer
+python3 INCLASS/run_all.py --answer
 ```
 
 ## Chay skeleton sinh vien
 
 ```bash
-.venv/bin/python INCLASS/run_all.py
+python3 INCLASS/run_all.py
 ```
 
 ```powershell
-.\.venv\Scripts\python.exe INCLASS\run_all.py
+python3 INCLASS/run_all.py
 ```
 
 Moi `description.md` cua bai deu co muc `## Run` voi day du lenh Windows

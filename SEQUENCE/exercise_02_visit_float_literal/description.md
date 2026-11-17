@@ -21,13 +21,13 @@ Hoàn thành `visitFloatLiteral(self, ctx, o)` cho AST
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe SEQUENCE\exercise_02_visit_float_literal\main.py
-.\.venv\Scripts\python.exe SEQUENCE\exercise_02_visit_float_literal\main.py --answer
+python3 SEQUENCE/exercise_02_visit_float_literal/main.py
+python3 SEQUENCE/exercise_02_visit_float_literal/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python SEQUENCE/exercise_02_visit_float_literal/main.py
-.venv/bin/python SEQUENCE/exercise_02_visit_float_literal/main.py --answer
+python3 SEQUENCE/exercise_02_visit_float_literal/main.py
+python3 SEQUENCE/exercise_02_visit_float_literal/main.py --answer
 ```

@@ -14,26 +14,26 @@ Moi bai co `solution.py` la skeleton cho sinh vien, `answer.py` la dap an tham k
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe OOP\oop_01_eval\main.py
-.\.venv\Scripts\python.exe OOP\oop_01_eval\main.py --answer
-.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py
-.\.venv\Scripts\python.exe OOP\oop_02_print_prefix\main.py --answer
-.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py
-.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py --answer
+python3 OOP/oop_01_eval/main.py
+python3 OOP/oop_01_eval/main.py --answer
+python3 OOP/oop_02_print_prefix/main.py
+python3 OOP/oop_02_print_prefix/main.py --answer
+python3 OOP/oop_03_visitor/main.py
+python3 OOP/oop_03_visitor/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python OOP/oop_01_eval/main.py --answer
-.venv/bin/python OOP/oop_02_print_prefix/main.py --answer
-.venv/bin/python OOP/oop_03_visitor/main.py --answer
+python3 OOP/oop_01_eval/main.py --answer
+python3 OOP/oop_02_print_prefix/main.py --answer
+python3 OOP/oop_03_visitor/main.py --answer
 ```
 
 Bo `--answer` de chay skeleton sinh vien:
 
 ```bash
-.venv/bin/python OOP/oop_03_visitor/main.py
+python3 OOP/oop_03_visitor/main.py
 ```
 
 ## Chay tat ca
@@ -41,13 +41,13 @@ Bo `--answer` de chay skeleton sinh vien:
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe OOP\run_all.py --answer
+python3 OOP/run_all.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python OOP/run_all.py --answer
+python3 OOP/run_all.py --answer
 ```
 
 ## AST formats

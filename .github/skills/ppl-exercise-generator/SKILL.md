@@ -22,7 +22,7 @@ The output must let a student edit the skeleton, run tests, see PASS/FAIL and fa
 - Find the project root and preserve its existing language, framework, naming, and test conventions.
 - If the workspace is empty, create a minimal runnable structure.
 - Check the runtime, package manager, parser generator, and dependencies before editing.
-- Resolve the project interpreter before running or documenting any command. Prefer an existing workspace environment such as `.venv/bin/python` (macOS/Linux) or `.venv\\Scripts\\python.exe` (Windows); otherwise use the repository's configured interpreter.
+- Resolve the project interpreter before running or documenting any command. Prefer an existing workspace environment such as `python3` (macOS/Linux) or `.venv//Scripts//python.exe` (Windows); otherwise use the repository's configured interpreter.
 - Use the same resolved interpreter for package installation, parser generation, syntax checks, reference tests, student tests, and commands written in `description.md`. Do not assume the system `python` or `python3` has project dependencies.
 - Verify imports for required runtime packages before executing generated code. For ANTLR Python projects, verify `antlr4` from `antlr4-python3-runtime` in the resolved interpreter.
 - Never overwrite unrelated user changes.
@@ -36,28 +36,28 @@ individual runner:
 ````markdown
 ## Run
 
-Từ thư mục repository root, trước tiên chạy `GROUP/setup.py` để generate
+Từ thư mục PPL_Exercise, trước tiên chạy `GROUP/setup.py` để generate
 parser. Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe GROUP\setup.py
-.\.venv\Scripts\python.exe GROUP\EXERCISE\main.py
-.\.venv\Scripts\python.exe GROUP\EXERCISE\main.py --answer
+python3 GROUP/setup.py
+python3 GROUP/EXERCISE/main.py
+python3 GROUP/EXERCISE/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python GROUP/setup.py
-.venv/bin/python GROUP/EXERCISE/main.py
-.venv/bin/python GROUP/EXERCISE/main.py --answer
+python3 GROUP/setup.py
+python3 GROUP/EXERCISE/main.py
+python3 GROUP/EXERCISE/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.
 ````
 
 For OOP exercises, omit the setup command and keep the two runner commands in
-both platform blocks. Never document `.venv/bin/python` as a Windows command,
+both platform blocks. Never document `python3` as a Windows command,
 and never use bare `python` or `python3` when the project virtual environment
 is available.
 
@@ -69,13 +69,13 @@ Before editing or validation:
 2. Check the dependency file and test imports with that interpreter, for example:
 
   ```bash
-  .venv/bin/python -c "import antlr4; print('antlr4 runtime: OK')"
+  python3 -c "import antlr4; print('antlr4 runtime: OK')"
   ```
 
 3. If a required package is missing, install the repository dependency file into that same environment, for example:
 
   ```bash
-  .venv/bin/python -m pip install -r requirements.txt
+  python3 -m pip install -r requirements.txt
   ```
 
 4. Re-run the import check before running tests. Never fix a project dependency by installing into an unrelated global Python environment without documenting that choice.

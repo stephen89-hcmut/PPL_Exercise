@@ -24,20 +24,20 @@ Runner áp dụng cùng expected values cho `double_recursive` và `double_highe
 
 ## Run
 
-Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe INCLASS\setup.py` để generate parser. Trên Windows PowerShell:
+Từ thư mục PPL_Exercise, trước tiên chạy `python3 INCLASS/setup.py` để generate parser. Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe INCLASS\setup.py
-.\.venv\Scripts\python.exe INCLASS\functional_03_double\main.py
-.\.venv\Scripts\python.exe INCLASS\functional_03_double\main.py --answer
+python3 INCLASS/setup.py
+python3 INCLASS/functional_03_double/main.py
+python3 INCLASS/functional_03_double/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python INCLASS/setup.py
-.venv/bin/python INCLASS/functional_03_double/main.py
-.venv/bin/python INCLASS/functional_03_double/main.py --answer
+python3 INCLASS/setup.py
+python3 INCLASS/functional_03_double/main.py
+python3 INCLASS/functional_03_double/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

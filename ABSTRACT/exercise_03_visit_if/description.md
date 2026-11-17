@@ -18,13 +18,13 @@ nhãn else/exit khi có nhánh else, và sinh nhãn exit khi không có else.
 Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe ABSTRACT\exercise_03_visit_if\main.py
-.\.venv\Scripts\python.exe ABSTRACT\exercise_03_visit_if\main.py --answer
+python3 ABSTRACT/exercise_03_visit_if/main.py
+python3 ABSTRACT/exercise_03_visit_if/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python ABSTRACT/exercise_03_visit_if/main.py
-.venv/bin/python ABSTRACT/exercise_03_visit_if/main.py --answer
+python3 ABSTRACT/exercise_03_visit_if/main.py
+python3 ABSTRACT/exercise_03_visit_if/main.py --answer
 ```

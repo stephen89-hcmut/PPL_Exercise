@@ -47,17 +47,17 @@ AST hoặc exception. Sinh viên chỉ sửa các thân method trong `solution.p
 Từ repository root, trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe NAME\exercise_01_redeclared_declaration\main.py
-.\.venv\Scripts\python.exe NAME\exercise_01_redeclared_declaration\main.py --answer
-.\.venv\Scripts\python.exe NAME\exercise_01_redeclared_declaration\main.py --demo-failure
+python3 NAME/exercise_01_redeclared_declaration/main.py
+python3 NAME/exercise_01_redeclared_declaration/main.py --answer
+python3 NAME/exercise_01_redeclared_declaration/main.py --demo-failure
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python NAME/exercise_01_redeclared_declaration/main.py
-.venv/bin/python NAME/exercise_01_redeclared_declaration/main.py --answer
-.venv/bin/python NAME/exercise_01_redeclared_declaration/main.py --demo-failure
+python3 NAME/exercise_01_redeclared_declaration/main.py
+python3 NAME/exercise_01_redeclared_declaration/main.py --answer
+python3 NAME/exercise_01_redeclared_declaration/main.py --demo-failure
 ```
 
 Không có `--answer` là skeleton sinh viên. Runner tiếp tục chạy các test sau

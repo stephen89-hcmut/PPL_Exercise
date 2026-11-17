@@ -17,13 +17,13 @@ Sinh viên sửa `solution.py`; `answer.py` là reference answer.
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe SEQUENCE\run_all.py
-.\.venv\Scripts\python.exe SEQUENCE\run_all.py --answer
+python3 SEQUENCE/run_all.py
+python3 SEQUENCE/run_all.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python SEQUENCE/run_all.py
-.venv/bin/python SEQUENCE/run_all.py --answer
+python3 SEQUENCE/run_all.py
+python3 SEQUENCE/run_all.py --answer
 ```

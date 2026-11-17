@@ -23,27 +23,27 @@ Hãy hoàn thành các method `accept` và các method `visitBinExp`, `visitUnEx
 | Test | Expected |
 | --- | --- |
 | `x1.accept(Eval())` với `IntLit(1)` | `1` |
-| `x1` prefix/postfix | `1 \| 1` |
+| `x1` prefix/postfix | `1 /| 1` |
 | `x2.accept(Eval())` với `FloatLit(2.0)` | `2.0` |
-| `x2` prefix/postfix | `2.0 \| 2.0` |
-| `x3` visitors với `1 + 1` | `2 \| + 1 1 \| 1 1 +` |
-| `x4` visitors với `-1` | `-1 \| -. 1 \| 1 -.` |
-| `x5` visitors với `-1 + 4 * 2.0` | `7.0 \| + -. 1 * 4 2.0 \| 1 -. 4 2.0 * +` |
+| `x2` prefix/postfix | `2.0 /| 2.0` |
+| `x3` visitors với `1 + 1` | `2 /| + 1 1 /| 1 1 +` |
+| `x4` visitors với `-1` | `-1 /| -. 1 /| 1 -.` |
+| `x5` visitors với `-1 + 4 * 2.0` | `7.0 /| + -. 1 * 4 2.0 /| 1 -. 4 2.0 * +` |
 
 ## Run
 
-Từ thư mục repository root: Trên Windows PowerShell:
+Từ thư mục PPL_Exercise: Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py
-.\.venv\Scripts\python.exe OOP\oop_03_visitor\main.py --answer
+python3 OOP/oop_03_visitor/main.py
+python3 OOP/oop_03_visitor/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python OOP/oop_03_visitor/main.py
-.venv/bin/python OOP/oop_03_visitor/main.py --answer
+python3 OOP/oop_03_visitor/main.py
+python3 OOP/oop_03_visitor/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

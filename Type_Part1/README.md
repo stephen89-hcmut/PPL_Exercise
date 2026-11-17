@@ -18,13 +18,13 @@ Sinh viên chỉ sửa `solution.py`. `answer.py` là lời giải tham chiếu;
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe Type_Part1\run_all.py --answer
+python3 Type_Part1/run_all.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python Type_Part1/run_all.py --answer
+python3 Type_Part1/run_all.py --answer
 ```
 
 Bỏ `--answer` để chạy skeleton.

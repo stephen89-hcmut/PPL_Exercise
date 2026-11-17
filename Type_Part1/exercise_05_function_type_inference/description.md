@@ -35,15 +35,15 @@ trong thân hàm hoặc từ cách sử dụng hợp lệ. Quy tắc:
 Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe Type_Part1\exercise_04_function_type_inference\main.py
-.\.venv\Scripts\python.exe Type_Part1\exercise_04_function_type_inference\main.py --answer
+python3 Type_Part1/exercise_05_function_type_inference/main.py
+python3 Type_Part1/exercise_05_function_type_inference/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python Type_Part1/exercise_04_function_type_inference/main.py
-.venv/bin/python Type_Part1/exercise_04_function_type_inference/main.py --answer
+python3 Type_Part1/exercise_05_function_type_inference/main.py
+python3 Type_Part1/exercise_05_function_type_inference/main.py --answer
 ```
 
 Bỏ `--answer` để chạy skeleton sinh viên.

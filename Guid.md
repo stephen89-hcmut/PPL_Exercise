@@ -28,29 +28,29 @@ Tai thu muc project. Trên Windows dùng `py`; trên Linux/macOS dùng
 
 ```powershell
 py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe AST_Part1\setup.py
-.\.venv\Scripts\python.exe INCLASS\setup.py
+python3 -m pip install -r requirements.txt
+python3 AST_Part1/setup.py
+python3 INCLASS/setup.py
 ```
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python AST_Part1/setup.py
-.venv/bin/python INCLASS/setup.py
+python3 -m pip install -r requirements.txt
+python3 AST_Part1/setup.py
+python3 INCLASS/setup.py
 ```
 
 `setup.py` tai `antlr-4.13.2-complete.jar` neu file chua ton tai, sau do generate parser Python vao `AST_Part1/generated/`. Co the doi version bang:
 
 ```bash
-ANTLR_VERSION=4.13.2 .venv/bin/python AST_Part1/setup.py
+ANTLR_VERSION=4.13.2 python3 AST_Part1/setup.py
 ```
 
 Trên PowerShell, đặt biến môi trường tương đương bằng:
 
 ```powershell
 $env:ANTLR_VERSION = "4.13.2"
-.\.venv\Scripts\python.exe AST_Part1\setup.py
+python3 AST_Part1/setup.py
 ```
 
 Hoac dat duong dan jar bang bien `ANTLR_JAR` trong moi truong cua ban va dieu chinh script neu can dung jar noi bo.
@@ -61,10 +61,10 @@ Sau khi tạo virtual environment, luôn dùng đúng executable của môi trư
 
 | He dieu hanh | Python executable |
 | --- | --- |
-| Windows PowerShell | `.\.venv\Scripts\python.exe` |
-| Linux/macOS | `.venv/bin/python` |
+| Windows PowerShell | `python3` |
+| Linux/macOS | `python3` |
 
-Không dùng `.venv/bin/python` trong PowerShell. Nếu chưa chạy bước setup,
+Không dùng `python3` trong PowerShell. Nếu chưa chạy bước setup,
 parser generated chưa tồn tại và bài ANTLR sẽ báo lỗi thiếu `*Visitor`.
 
 ## 3. Chay bai tap
@@ -72,53 +72,53 @@ parser generated chưa tồn tại và bài ANTLR sẽ báo lỗi thiếu `*Visi
 Chay tat ca dap an tham khao:
 
 ```powershell
-.\.venv\Scripts\python.exe AST_Part1\run_all.py --answer
+python3 AST_Part1/run_all.py --answer
 ```
 
 ```bash
-.venv/bin/python AST_Part1/run_all.py --answer
+python3 AST_Part1/run_all.py --answer
 ```
 
 Chay tat ca skeleton de xem cac test dang cho:
 
 ```powershell
-.\.venv\Scripts\python.exe AST_Part1\run_all.py
+python3 AST_Part1/run_all.py
 ```
 
 ```bash
-.venv/bin/python AST_Part1/run_all.py
+python3 AST_Part1/run_all.py
 ```
 
 Chay tung bai:
 
 ```powershell
-.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py
-.\.venv\Scripts\python.exe AST_Part1\exercise_02_non_terminal_count\main.py
-.\.venv\Scripts\python.exe AST_Part1\exercise_03_ast_generation_recursive\main.py
-.\.venv\Scripts\python.exe AST_Part1\exercise_04_ast_generation_repeated\main.py
+python3 AST_Part1/exercise_01_height/main.py
+python3 AST_Part1/exercise_02_non_terminal_count/main.py
+python3 AST_Part1/exercise_03_ast_generation_recursive/main.py
+python3 AST_Part1/exercise_04_ast_generation_repeated/main.py
 ```
 
 ```bash
-.venv/bin/python AST_Part1/exercise_01_height/main.py
-.venv/bin/python AST_Part1/exercise_02_non_terminal_count/main.py
-.venv/bin/python AST_Part1/exercise_03_ast_generation_recursive/main.py
-.venv/bin/python AST_Part1/exercise_04_ast_generation_repeated/main.py
+python3 AST_Part1/exercise_01_height/main.py
+python3 AST_Part1/exercise_02_non_terminal_count/main.py
+python3 AST_Part1/exercise_03_ast_generation_recursive/main.py
+python3 AST_Part1/exercise_04_ast_generation_repeated/main.py
 ```
 
 Chay dap an tham khao cua tung bai AST_Part1 bang cach them `--answer`:
 
 ```powershell
-.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py --answer
-.\.venv\Scripts\python.exe AST_Part1\exercise_02_non_terminal_count\main.py --answer
-.\.venv\Scripts\python.exe AST_Part1\exercise_03_ast_generation_recursive\main.py --answer
-.\.venv\Scripts\python.exe AST_Part1\exercise_04_ast_generation_repeated\main.py --answer
+python3 AST_Part1/exercise_01_height/main.py --answer
+python3 AST_Part1/exercise_02_non_terminal_count/main.py --answer
+python3 AST_Part1/exercise_03_ast_generation_recursive/main.py --answer
+python3 AST_Part1/exercise_04_ast_generation_repeated/main.py --answer
 ```
 
 ```bash
-.venv/bin/python AST_Part1/exercise_01_height/main.py --answer
-.venv/bin/python AST_Part1/exercise_02_non_terminal_count/main.py --answer
-.venv/bin/python AST_Part1/exercise_03_ast_generation_recursive/main.py --answer
-.venv/bin/python AST_Part1/exercise_04_ast_generation_repeated/main.py --answer
+python3 AST_Part1/exercise_01_height/main.py --answer
+python3 AST_Part1/exercise_02_non_terminal_count/main.py --answer
+python3 AST_Part1/exercise_03_ast_generation_recursive/main.py --answer
+python3 AST_Part1/exercise_04_ast_generation_repeated/main.py --answer
 ```
 
 Moi dong report co dang `Test`, `Expected`, `Got`, `PASS`/`FAIL`. Neu parser loi, report in `ParseError`; neu ket qua khac expected, report in reason mismatch va van chay test tiep theo.
@@ -126,11 +126,11 @@ Moi dong report co dang `Test`, `Expected`, `Got`, `PASS`/`FAIL`. Neu parser loi
 De xem mot test fail mau:
 
 ```powershell
-.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py --demo-failure
+python3 AST_Part1/exercise_01_height/main.py --demo-failure
 ```
 
 ```bash
-.venv/bin/python AST_Part1/exercise_01_height/main.py --demo-failure
+python3 AST_Part1/exercise_01_height/main.py --demo-failure
 ```
 
 ## 3.1. Type_Part1
@@ -140,11 +140,11 @@ Sinh vien chi sua `solution.py` trong mot thu muc `exercise_*`. Chay reference
 answers:
 
 ```powershell
-.\.venv\Scripts\python.exe Type_Part1\run_all.py --answer
+python3 Type_Part1/run_all.py --answer
 ```
 
 ```bash
-.venv/bin/python Type_Part1/run_all.py --answer
+python3 Type_Part1/run_all.py --answer
 ```
 
 Chay rieng mot bai bang `main.py`; bo `--answer` de chay skeleton va them
@@ -155,40 +155,40 @@ Chay rieng mot bai bang `main.py`; bo `--answer` de chay skeleton va them
 Chay toan bo dap an tham khao:
 
 ```bash
-.venv/bin/python INCLASS/run_all.py --answer
+python3 INCLASS/run_all.py --answer
 ```
 
 Chay skeleton cho sinh vien:
 
 ```bash
-.venv/bin/python INCLASS/run_all.py
+python3 INCLASS/run_all.py
 ```
 
 Chay rieng mot bai:
 
 ```bash
-.venv/bin/python INCLASS/functional_03_double/main.py --answer
-.venv/bin/python INCLASS/ast_07_expression_loop/main.py --answer
+python3 INCLASS/functional_03_double/main.py --answer
+python3 INCLASS/ast_07_expression_loop/main.py --answer
 ```
 
 Danh sach lenh chay tung bai INCLASS:
 
 ```bash
 # Functional Programming
-.venv/bin/python INCLASS/functional_03_double/main.py --answer
-.venv/bin/python INCLASS/functional_04_flatten/main.py --answer
-.venv/bin/python INCLASS/functional_05_less_than/main.py --answer
-.venv/bin/python INCLASS/functional_06_compose/main.py --answer
+python3 INCLASS/functional_03_double/main.py --answer
+python3 INCLASS/functional_04_flatten/main.py --answer
+python3 INCLASS/functional_05_less_than/main.py --answer
+python3 INCLASS/functional_06_compose/main.py --answer
 
 # AST va Expression
-.venv/bin/python INCLASS/ast_01_ids_recursive/main.py --answer
-.venv/bin/python INCLASS/ast_02_ids_loop/main.py --answer
-.venv/bin/python INCLASS/ast_03_vardecl/main.py --answer
-.venv/bin/python INCLASS/ast_04_program/main.py --answer
-.venv/bin/python INCLASS/ast_05_expression_recursive/main.py --answer
-.venv/bin/python INCLASS/ast_06_expression_precedence/main.py --answer
-.venv/bin/python INCLASS/ast_07_expression_loop/main.py --answer
-.venv/bin/python INCLASS/ast_08_expression_split/main.py --answer
+python3 INCLASS/ast_01_ids_recursive/main.py --answer
+python3 INCLASS/ast_02_ids_loop/main.py --answer
+python3 INCLASS/ast_03_vardecl/main.py --answer
+python3 INCLASS/ast_04_program/main.py --answer
+python3 INCLASS/ast_05_expression_recursive/main.py --answer
+python3 INCLASS/ast_06_expression_precedence/main.py --answer
+python3 INCLASS/ast_07_expression_loop/main.py --answer
+python3 INCLASS/ast_08_expression_split/main.py --answer
 ```
 
 De chay skeleton cho sinh vien, bo `--answer` khoi lenh tuong ung.

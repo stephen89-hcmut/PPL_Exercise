@@ -47,20 +47,20 @@ ids: ID ',' ids | ID;
 
 ## Run
 
-Từ thư mục repository root, trước tiên chạy `.\.venv\Scripts\python.exe AST_Part1\setup.py` để generate parser. Trên Windows PowerShell:
+Từ thư mục PPL_Exercise, trước tiên chạy `python3 AST_Part1/setup.py` để generate parser. Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe AST_Part1\setup.py
-.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py
-.\.venv\Scripts\python.exe AST_Part1\exercise_01_height\main.py --answer
+python3 AST_Part1/setup.py
+python3 AST_Part1/exercise_01_height/main.py
+python3 AST_Part1/exercise_01_height/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python AST_Part1/setup.py
-.venv/bin/python AST_Part1/exercise_01_height/main.py
-.venv/bin/python AST_Part1/exercise_01_height/main.py --answer
+python3 AST_Part1/setup.py
+python3 AST_Part1/exercise_01_height/main.py
+python3 AST_Part1/exercise_01_height/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

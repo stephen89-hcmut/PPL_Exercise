@@ -27,18 +27,18 @@ Hãy hoàn thành các method `eval()` trong `solution.py` để mỗi object tr
 
 ## Run
 
-Từ thư mục repository root: Trên Windows PowerShell:
+Từ thư mục PPL_Exercise: Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe OOP\oop_01_eval\main.py
-.\.venv\Scripts\python.exe OOP\oop_01_eval\main.py --answer
+python3 OOP/oop_01_eval/main.py
+python3 OOP/oop_01_eval/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python OOP/oop_01_eval/main.py
-.venv/bin/python OOP/oop_01_eval/main.py --answer
+python3 OOP/oop_01_eval/main.py
+python3 OOP/oop_01_eval/main.py --answer
 ```
 
 Lệnh đầu chạy skeleton sinh viên; `--answer` chạy lời giải tham chiếu.

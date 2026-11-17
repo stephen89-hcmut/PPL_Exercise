@@ -39,22 +39,22 @@ nhất chứa lỗi. Không đổi tên class hoặc method trong skeleton.
 
 ## Run
 
-Từ thư mục repository root.
+Từ thư mục PPL_Exercise.
 
 Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe Type_Part1\exercise_01_expression_types\main.py
-.\.venv\Scripts\python.exe Type_Part1\exercise_01_expression_types\main.py --answer
-.\.venv\Scripts\python.exe Type_Part1\exercise_01_expression_types\main.py --demo-failure
+python3 Type_Part1/exercise_01_expression_types/main.py
+python3 Type_Part1/exercise_01_expression_types/main.py --answer
+python3 Type_Part1/exercise_01_expression_types/main.py --demo-failure
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python Type_Part1/exercise_01_expression_types/main.py
-.venv/bin/python Type_Part1/exercise_01_expression_types/main.py --answer
-.venv/bin/python Type_Part1/exercise_01_expression_types/main.py --demo-failure
+python3 Type_Part1/exercise_01_expression_types/main.py
+python3 Type_Part1/exercise_01_expression_types/main.py --answer
+python3 Type_Part1/exercise_01_expression_types/main.py --demo-failure
 ```
 
 Bỏ `--answer` để chạy skeleton sinh viên.

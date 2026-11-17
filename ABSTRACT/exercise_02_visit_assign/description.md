@@ -17,13 +17,13 @@ trước LHS rồi dùng `emit.printout` để ghi phép gán. Hai vế có cùn
 Trên Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe ABSTRACT\exercise_02_visit_assign\main.py
-.\.venv\Scripts\python.exe ABSTRACT\exercise_02_visit_assign\main.py --answer
+python3 ABSTRACT/exercise_02_visit_assign/main.py
+python3 ABSTRACT/exercise_02_visit_assign/main.py --answer
 ```
 
 Trên Linux/macOS:
 
 ```bash
-.venv/bin/python ABSTRACT/exercise_02_visit_assign/main.py
-.venv/bin/python ABSTRACT/exercise_02_visit_assign/main.py --answer
+python3 ABSTRACT/exercise_02_visit_assign/main.py
+python3 ABSTRACT/exercise_02_visit_assign/main.py --answer
 ```

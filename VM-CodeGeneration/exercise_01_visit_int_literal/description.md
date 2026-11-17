@@ -10,24 +10,24 @@ Method phải dùng `emitPUSHICONST(ctx.value, o.frame)` và trả về cặp
 
 | Input                  | Expected   |
 | ---------------------- | ---------- |
-| `IntLiteral(5)`      | `5`      |
-| `IntLiteral(217)`    | `217`    |
-| `IntLiteral(-1)`     | `-1`     |
-| `IntLiteral(371846)` | `371846` |
-| `IntLiteral(2345)`   | `2345`   |
+| `IntLiteral(5)` | `b'5'` |
+| `IntLiteral(217)` | `b'217'` |
+| `IntLiteral(-1)` | `b'-1'` |
+| `IntLiteral(371846)` | `b'371846'` |
+| `IntLiteral(2345)` | `b'2345'` |
 
 ## Run
 
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe VM-CodeGeneration\exercise_01_visit_int_literal\main.py
-.\.venv\Scripts\python.exe VM-CodeGeneration\exercise_01_visit_int_literal\main.py --answer
+python3 VM-CodeGeneration/exercise_01_visit_int_literal/main.py
+python3 VM-CodeGeneration/exercise_01_visit_int_literal/main.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python VM-CodeGeneration/exercise_01_visit_int_literal/main.py
-.venv/bin/python VM-CodeGeneration/exercise_01_visit_int_literal/main.py --answer
+python3 VM-CodeGeneration/exercise_01_visit_int_literal/main.py
+python3 VM-CodeGeneration/exercise_01_visit_int_literal/main.py --answer
 ```

@@ -18,14 +18,14 @@ bài có runner riêng, cột `Test | Expected | Got | Status`, `--answer`, và
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\python.exe ABSTRACT\run_all.py
-.\.venv\Scripts\python.exe ABSTRACT\run_all.py --answer
+python3 ABSTRACT/run_all.py
+python3 ABSTRACT/run_all.py --answer
 ```
 
 Linux/macOS:
 
 ```bash
-.venv/bin/python ABSTRACT/run_all.py
-.venv/bin/python ABSTRACT/run_all.py --answer
-.venv/bin/python ABSTRACT/exercise_01_visit_id/main.py --demo-failure
+python3 ABSTRACT/run_all.py
+python3 ABSTRACT/run_all.py --answer
+python3 ABSTRACT/exercise_01_visit_id/main.py --demo-failure
 ```

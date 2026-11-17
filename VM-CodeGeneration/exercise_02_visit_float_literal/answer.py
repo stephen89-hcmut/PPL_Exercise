@@ -6,7 +6,7 @@ from common.runtime import CodeGeneration, FloatType
 
 class AnswerCodeGeneration(CodeGeneration):
     def visitFloatLiteral(self, ctx, o):
-        return ctx.value, FloatType()
+        return self.emit.emitPUSHFCONST(ctx.value, o.frame), FloatType()
 
 
 def solve(node):
